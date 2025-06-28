@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Bubblegum Pop Theme Colors
+				'bubble-pink': '#FF69B4',
+				'aqua-blue': '#00FFFF',
+				'lemon-yellow': '#FFFF66',
+				'hot-pink': '#FF1493',
+				'neon-green': '#39FF14',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +91,47 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'bounce-slow': {
+					'0%, 100%': {
+						transform: 'translateY(-5%)',
+						'animation-timing-function': 'cubic-bezier(0.8,0,1,1)'
+					},
+					'50%': {
+						transform: 'none',
+						'animation-timing-function': 'cubic-bezier(0,0,0.2,1)'
+					}
+				},
+				'pulse-glow': {
+					'0%, 100%': {
+						opacity: '1',
+						transform: 'scale(1)'
+					},
+					'50%': {
+						opacity: '0.8',
+						transform: 'scale(1.05)'
+					}
+				},
+				'typewriter': {
+					'from': { width: '0' },
+					'to': { width: '100%' }
+				},
+				'blink': {
+					'from, to': { 'border-color': 'transparent' },
+					'50%': { 'border-color': '#FF69B4' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'bounce-slow': 'bounce-slow 2s infinite',
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite alternate',
+				'typewriter': 'typewriter 3s steps(40, end)',
+				'blink': 'blink 1s infinite'
+			},
+			fontFamily: {
+				'bubblegum': ['"Bubblegum Sans"', 'cursive'],
+				'comic': ['"Comic Neue"', 'cursive'],
 			}
 		}
 	},
