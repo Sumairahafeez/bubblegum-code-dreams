@@ -102,7 +102,16 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground transition-colors duration-300;
+  }
+
+  /* Enhanced Dark Mode Styles */
+  .dark {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  }
+
+  .dark .polka-dots-subtle {
+    background-image: radial-gradient(circle, rgba(168, 85, 247, 0.1) 15%, transparent 15%);
   }
 }
 
@@ -130,6 +139,14 @@ All colors MUST be HSL.
   background-clip: text;
 }
 
+/* Enhanced Dark Mode Text Gradient */
+.dark .bubble-text-gradient {
+  background: linear-gradient(135deg, #a855f7, #ec4899, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .bounce-button {
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
@@ -137,6 +154,11 @@ All colors MUST be HSL.
 .bounce-button:hover {
   transform: translateY(-8px) scale(1.05);
   box-shadow: 0 10px 25px rgba(255, 105, 180, 0.4);
+}
+
+/* Enhanced Dark Mode Bounce Button */
+.dark .bounce-button:hover {
+  box-shadow: 0 10px 25px rgba(168, 85, 247, 0.4);
 }
 
 .typewriter {
@@ -152,6 +174,11 @@ All colors MUST be HSL.
   text-shadow: 0 0 5px #FF69B4, 0 0 10px #FF69B4, 0 0 15px #FF69B4, 0 0 20px #FF69B4;
 }
 
+/* Enhanced Dark Mode Neon Glow */
+.dark .neon-glow {
+  text-shadow: 0 0 5px #a855f7, 0 0 10px #a855f7, 0 0 15px #a855f7, 0 0 20px #a855f7;
+}
+
 .card-hover {
   transition: all 0.3s ease;
   border: 3px solid transparent;
@@ -161,4 +188,15 @@ All colors MUST be HSL.
   border-color: #FF69B4;
   transform: translateY(-5px) rotate(1deg);
   box-shadow: 0 15px 30px rgba(255, 105, 180, 0.3);
+}
+
+/* Enhanced Dark Mode Card Hover */
+.dark .card-hover:hover {
+  border-color: #a855f7;
+  box-shadow: 0 15px 30px rgba(168, 85, 247, 0.3);
+}
+
+/* Smooth transitions for dark mode */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
