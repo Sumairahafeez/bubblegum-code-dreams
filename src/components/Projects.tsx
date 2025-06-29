@@ -2,9 +2,11 @@
 import { ExternalLink, Github, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 const Projects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const projectsPerPage = 4;
 
   const projects = [
@@ -14,7 +16,7 @@ const Projects = () => {
       tech: ["React", "TensorFlow.js", "Python", "FastAPI"],
       image: "🎨",
       gradient: "from-bubble-pink to-hot-pink",
-      category: "AI/ML"
+      category: "ai"
     },
     {
       title: "Bubbly Dashboard",
@@ -22,7 +24,15 @@ const Projects = () => {
       tech: ["Vue.js", "D3.js", "Tailwind", "Chart.js"],
       image: "📊",
       gradient: "from-aqua-blue to-neon-green",
-      category: "Frontend"
+      category: "frontend"
+    },
+    {
+      title: "Kawaii Mobile App Design",
+      description: "A complete UI/UX design system for a productivity app with cute animations, custom illustrations, and user research insights.",
+      tech: ["Figma", "Adobe XD", "Principle", "InVision"],
+      image: "💕",
+      gradient: "from-lemon-yellow to-bubble-pink",
+      category: "uiux"
     },
     {
       title: "Sentiment Bubble Bot",
@@ -30,7 +40,7 @@ const Projects = () => {
       tech: ["React", "NLP", "Python", "WebSocket"],
       image: "🤖",
       gradient: "from-lemon-yellow to-bubble-pink",
-      category: "AI/ML"
+      category: "ai"
     },
     {
       title: "Pastel Portfolio CMS",
@@ -38,7 +48,15 @@ const Projects = () => {
       tech: ["Next.js", "MongoDB", "Cloudinary", "Framer Motion"],
       image: "💖",
       gradient: "from-hot-pink to-aqua-blue",
-      category: "Frontend"
+      category: "frontend"
+    },
+    {
+      title: "Beauty Brand Design System",
+      description: "Complete brand identity and design system for a sustainable beauty startup, including packaging and digital assets.",
+      tech: ["Sketch", "Figma", "Adobe Creative Suite", "Zeplin"],
+      image: "✨",
+      gradient: "from-bubble-pink to-neon-green",
+      category: "uiux"
     },
     {
       title: "Kawaii Weather App",
@@ -46,7 +64,7 @@ const Projects = () => {
       tech: ["React", "OpenWeather API", "CSS3", "Framer Motion"],
       image: "🌈",
       gradient: "from-lemon-yellow to-aqua-blue",
-      category: "Frontend"
+      category: "frontend"
     },
     {
       title: "ML Recipe Generator",
@@ -54,7 +72,15 @@ const Projects = () => {
       tech: ["Python", "TensorFlow", "Flask", "React"],
       image: "🍰",
       gradient: "from-bubble-pink to-neon-green",
-      category: "AI/ML"
+      category: "ai"
+    },
+    {
+      title: "E-commerce App Redesign",
+      description: "Complete UX audit and redesign of a fashion e-commerce app, improving conversion rates by 40% through user-centered design.",
+      tech: ["Figma", "Miro", "Hotjar", "Maze"],
+      image: "🛍️",
+      gradient: "from-hot-pink to-aqua-blue",
+      category: "uiux"
     },
     {
       title: "Bubbly Task Manager",
@@ -62,7 +88,7 @@ const Projects = () => {
       tech: ["React", "TypeScript", "Tailwind", "Firebase"],
       image: "📝",
       gradient: "from-hot-pink to-lemon-yellow",
-      category: "Frontend"
+      category: "frontend"
     },
     {
       title: "Smart Mirror UI",
@@ -70,19 +96,44 @@ const Projects = () => {
       tech: ["React", "Raspberry Pi", "Python", "Speech API"],
       image: "🪞",
       gradient: "from-aqua-blue to-bubble-pink",
-      category: "AI/ML"
+      category: "ai"
+    },
+    {
+      title: "Dating App Prototype",
+      description: "User research and prototype design for a female-focused dating app with safety features and inclusive design principles.",
+      tech: ["Figma", "Principle", "UserTesting", "Maze"],
+      image: "💌",
+      gradient: "from-bubble-pink to-lemon-yellow",
+      category: "uiux"
     }
   ];
 
-  const totalPages = Math.ceil(projects.length / projectsPerPage);
-  const currentProjects = projects.slice(currentIndex, currentIndex + projectsPerPage);
+  const categories = [
+    { id: 'all', label: 'All Projects', emoji: '✨' },
+    { id: 'ai', label: 'AI/ML', emoji: '🤖' },
+    { id: 'frontend', label: 'Frontend', emoji: '💻' },
+    { id: 'uiux', label: 'UI/UX', emoji: '🎨' }
+  ];
+
+  const filteredProjects = selectedCategory === 'all' 
+    ? projects 
+    : projects.filter(project => project.category === selectedCategory);
+
+  const totalPages = Math.ceil(filteredProjects.length / projectsPerPage);
+  const currentProjects = filteredProjects.slice(currentIndex, currentIndex + projectsPerPage);
 
   const nextProjects = () => {
-    setCurrentIndex((prev) => (prev + projectsPerPage) % projects.length);
+    setCurrentIndex((prev) => (prev + projectsPerPage) % filteredProjects.length);
   };
 
   const prevProjects = () => {
-    setCurrentIndex((prev) => (prev - projectsPerPage + projects.length) % projects.length);
+    setCurrentIndex((prev) => (prev - projectsPerPage + filteredProjects.length) % filteredProjects.length);
+  };
+
+  // Reset pagination when category changes
+  const handleCategoryChange = (category: string) => {
+    setSelectedCategory(category);
+    setCurrentIndex(0);
   };
 
   return (
@@ -98,12 +149,30 @@ const Projects = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-aqua-blue to-bubble-pink mx-auto rounded-full mt-4"></div>
         </div>
 
+        {/* Category Filter Tabs */}
+        <div className="flex justify-center mb-12">
+          <Tabs value={selectedCategory} onValueChange={handleCategoryChange} className="w-full max-w-2xl">
+            <TabsList className="grid w-full grid-cols-4 bg-white/50 backdrop-blur-sm rounded-full p-1 border-2 border-dashed border-bubble-pink/30">
+              {categories.map((category) => (
+                <TabsTrigger
+                  key={category.id}
+                  value={category.id}
+                  className="font-comic font-bold text-sm rounded-full data-[state=active]:bg-bubble-pink data-[state=active]:text-white data-[state=active]:shadow-lg transition-all duration-300"
+                >
+                  <span className="mr-1">{category.emoji}</span>
+                  {category.label}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+          </Tabs>
+        </div>
+
         {/* Navigation Controls */}
         <div className="flex justify-center items-center gap-4 mb-8">
           <Button
             onClick={prevProjects}
             className="bounce-button bg-bubble-pink hover:bg-hot-pink text-white font-comic rounded-full p-3 border-2 border-black"
-            disabled={projects.length <= projectsPerPage}
+            disabled={filteredProjects.length <= projectsPerPage}
           >
             <ChevronLeft className="w-5 h-5" />
           </Button>
@@ -115,13 +184,13 @@ const Projects = () => {
           <Button
             onClick={nextProjects}
             className="bounce-button bg-bubble-pink hover:bg-hot-pink text-white font-comic rounded-full p-3 border-2 border-black"
-            disabled={projects.length <= projectsPerPage}
+            disabled={filteredProjects.length <= projectsPerPage}
           >
             <ChevronRight className="w-5 h-5" />
           </Button>
         </div>
 
-        {/* Smaller Projects Grid */}
+        {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {currentProjects.map((project, index) => (
             <div 
@@ -137,7 +206,7 @@ const Projects = () => {
                   {project.image}
                 </div>
                 <div className="inline-block bg-white/20 backdrop-blur-sm rounded-full px-2 py-1 text-xs text-white font-comic font-bold">
-                  {project.category}
+                  {categories.find(cat => cat.id === project.category)?.label || 'Other'}
                 </div>
               </div>
 
