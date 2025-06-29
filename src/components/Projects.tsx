@@ -1,8 +1,12 @@
 
-import { ExternalLink, Github, Sparkles } from 'lucide-react';
+import { ExternalLink, Github, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useState } from 'react';
 
 const Projects = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const projectsPerPage = 4;
+
   const projects = [
     {
       title: "AI-Powered Fashion Finder",
@@ -35,8 +39,51 @@ const Projects = () => {
       image: "💖",
       gradient: "from-hot-pink to-aqua-blue",
       category: "Frontend"
+    },
+    {
+      title: "Kawaii Weather App",
+      description: "A cute weather app with animated characters that change based on weather conditions. Features location-based forecasts.",
+      tech: ["React", "OpenWeather API", "CSS3", "Framer Motion"],
+      image: "🌈",
+      gradient: "from-lemon-yellow to-aqua-blue",
+      category: "Frontend"
+    },
+    {
+      title: "ML Recipe Generator",
+      description: "An AI-powered recipe generator that creates personalized recipes based on dietary preferences and available ingredients.",
+      tech: ["Python", "TensorFlow", "Flask", "React"],
+      image: "🍰",
+      gradient: "from-bubble-pink to-neon-green",
+      category: "AI/ML"
+    },
+    {
+      title: "Bubbly Task Manager",
+      description: "A productivity app with gamification elements, progress tracking, and customizable themes for organizing daily tasks.",
+      tech: ["React", "TypeScript", "Tailwind", "Firebase"],
+      image: "📝",
+      gradient: "from-hot-pink to-lemon-yellow",
+      category: "Frontend"
+    },
+    {
+      title: "Smart Mirror UI",
+      description: "An IoT smart mirror interface displaying weather, calendar, and personalized AI insights with voice control.",
+      tech: ["React", "Raspberry Pi", "Python", "Speech API"],
+      image: "🪞",
+      gradient: "from-aqua-blue to-bubble-pink",
+      category: "AI/ML"
     }
   ];
+
+  const totalPages = Math.ceil(projects.length / projectsPerPage);
+  const currentProjects = projects.slice(currentIndex, currentIndex + projectsPerPage);
+
+  const nextProjects = () => {
+    setCurrentIndex((prev) => (prev + projectsPerPage) % projects.length);
+  };
+
+  const prevProjects = () => {
+    setCurrentIndex((prev) => (prev - projectsPerPage + projects.length) % projects.length);
+  };
 
   return (
     <section id="projects" className="py-20 bg-gradient-to-br from-aqua-blue/10 via-white to-lemon-yellow/10 polka-dots-subtle">
@@ -51,61 +98,90 @@ const Projects = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-aqua-blue to-bubble-pink mx-auto rounded-full mt-4"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
+        {/* Navigation Controls */}
+        <div className="flex justify-center items-center gap-4 mb-8">
+          <Button
+            onClick={prevProjects}
+            className="bounce-button bg-bubble-pink hover:bg-hot-pink text-white font-comic rounded-full p-3 border-2 border-black"
+            disabled={projects.length <= projectsPerPage}
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </Button>
+          
+          <div className="font-comic text-gray-600">
+            {Math.floor(currentIndex / projectsPerPage) + 1} of {totalPages}
+          </div>
+          
+          <Button
+            onClick={nextProjects}
+            className="bounce-button bg-bubble-pink hover:bg-hot-pink text-white font-comic rounded-full p-3 border-2 border-black"
+            disabled={projects.length <= projectsPerPage}
+          >
+            <ChevronRight className="w-5 h-5" />
+          </Button>
+        </div>
+
+        {/* Smaller Projects Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {currentProjects.map((project, index) => (
             <div 
               key={project.title}
               className={`card-hover bg-white rounded-3xl overflow-hidden shadow-xl transform hover:scale-105 transition-all duration-500 delay-${index * 100}`}
             >
-              {/* Project Header */}
-              <div className={`bg-gradient-to-r ${project.gradient} p-6 text-center relative overflow-hidden`}>
-                <div className="absolute top-2 right-2">
-                  <Sparkles className="w-6 h-6 text-white animate-bounce-slow" />
+              {/* Project Header - Smaller */}
+              <div className={`bg-gradient-to-r ${project.gradient} p-4 text-center relative overflow-hidden`}>
+                <div className="absolute top-1 right-1">
+                  <Sparkles className="w-4 h-4 text-white animate-bounce-slow" />
                 </div>
-                <div className="text-6xl mb-4 animate-pulse-glow">
+                <div className="text-4xl mb-2 animate-pulse-glow">
                   {project.image}
                 </div>
-                <div className="inline-block bg-white/20 backdrop-blur-sm rounded-full px-4 py-1 text-white font-comic font-bold">
+                <div className="inline-block bg-white/20 backdrop-blur-sm rounded-full px-2 py-1 text-xs text-white font-comic font-bold">
                   {project.category}
                 </div>
               </div>
 
-              {/* Project Content */}
-              <div className="p-6">
-                <h3 className="font-bubblegum text-2xl font-bold text-gray-800 mb-3">
+              {/* Project Content - Compact */}
+              <div className="p-4">
+                <h3 className="font-bubblegum text-lg font-bold text-gray-800 mb-2">
                   {project.title}
                 </h3>
-                <p className="font-comic text-gray-600 mb-4 leading-relaxed">
+                <p className="font-comic text-sm text-gray-600 mb-3 leading-relaxed line-clamp-3">
                   {project.description}
                 </p>
 
-                {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.tech.map((tech) => (
+                {/* Tech Stack - Smaller */}
+                <div className="flex flex-wrap gap-1 mb-4">
+                  {project.tech.slice(0, 3).map((tech) => (
                     <span 
                       key={tech}
-                      className="bg-gradient-to-r from-bubble-pink/20 to-aqua-blue/20 rounded-full px-3 py-1 text-sm font-comic font-bold text-gray-700 border border-dashed border-bubble-pink/50"
+                      className="bg-gradient-to-r from-bubble-pink/20 to-aqua-blue/20 rounded-full px-2 py-1 text-xs font-comic font-bold text-gray-700 border border-dashed border-bubble-pink/50"
                     >
                       {tech}
                     </span>
                   ))}
+                  {project.tech.length > 3 && (
+                    <span className="text-xs font-comic text-gray-500">
+                      +{project.tech.length - 3} more
+                    </span>
+                  )}
                 </div>
 
-                {/* Action Buttons */}
-                <div className="flex gap-3">
+                {/* Action Buttons - Smaller */}
+                <div className="flex gap-2">
                   <Button 
                     size="sm"
-                    className="bounce-button bg-bubble-pink hover:bg-hot-pink text-white font-comic rounded-full border-2 border-black"
+                    className="bounce-button bg-bubble-pink hover:bg-hot-pink text-white font-comic rounded-full border-2 border-black text-xs px-3 py-1"
                   >
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    Live Demo
+                    <ExternalLink className="w-3 h-3 mr-1" />
+                    Demo
                   </Button>
                   <Button 
                     size="sm"
                     variant="outline"
-                    className="bounce-button border-2 border-aqua-blue text-aqua-blue hover:bg-aqua-blue hover:text-black font-comic rounded-full"
+                    className="bounce-button border-2 border-aqua-blue text-aqua-blue hover:bg-aqua-blue hover:text-black font-comic rounded-full text-xs px-3 py-1"
                   >
-                    <Github className="w-4 h-4 mr-2" />
+                    <Github className="w-3 h-3 mr-1" />
                     Code
                   </Button>
                 </div>
