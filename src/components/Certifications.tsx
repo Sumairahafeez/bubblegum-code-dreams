@@ -1,48 +1,48 @@
 
 import { Award, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
+import AI from '../assets/AI.jpg';
 const Certifications = () => {
   const certifications = [
     {
-      title: "TensorFlow Developer Certificate",
-      issuer: "Google",
+      title: "AI Engineer Explorer Certificate",
+      issuer: "Jet Academy Udemy",
+      date: "2025",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
+      credentialUrl: "#",
+      skills: ["Matplotlib", "AI/ML", "Python"]
+    },
+    {
+      title: "AI Engineer Professional Certificate",
+      issuer: "Jet Academy Udemy",
+      date: "2025",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop",
+      credentialUrl: "#",
+      skills: ["Neural Network", "CNN", "Machine Learning"]
+    },
+    {
+      title: "MongoDb Certificate",
+      issuer: "SKLearn",
       date: "2024",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
+      image: "../assets/mongodb.png",
       credentialUrl: "#",
-      skills: ["TensorFlow", "Machine Learning", "Python"]
+      skills: ["MongoDB", "Database"]
     },
     {
-      title: "AWS Certified Solutions Architect",
-      issuer: "Amazon Web Services",
-      date: "2023",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop",
+      title: "MySQL Certificate",
+      issuer: "SKlearn",
+      date: "2024",
+      image: "../assets/mysql.png",
       credentialUrl: "#",
-      skills: ["AWS", "Cloud Computing", "Architecture"]
+      skills: ["MySQL", "Database"]
     },
     {
-      title: "Meta Frontend Developer Certificate",
-      issuer: "Meta",
-      date: "2023",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop",
+      title: "AI workshop Certificate",
+      issuer: "Tech Nexus",
+      date: "2024",
+      image: AI,
       credentialUrl: "#",
-      skills: ["React", "JavaScript", "HTML/CSS"]
-    },
-    {
-      title: "Google UX Design Certificate",
-      issuer: "Google",
-      date: "2023",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
-      credentialUrl: "#",
-      skills: ["UX Design", "Figma", "User Research"]
-    },
-    {
-      title: "Microsoft Azure AI Fundamentals",
-      issuer: "Microsoft",
-      date: "2022",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop",
-      credentialUrl: "#",
-      skills: ["Azure", "AI", "Machine Learning"]
+      skills: ["Scikit-learn", "AI", "Machine Learning"]
     },
     {
       title: "Certified Ethical Hacker",
