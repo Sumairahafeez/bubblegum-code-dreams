@@ -39,15 +39,15 @@ const Hero = () => {
 
         {/* Name and Title */}
         <h1 className="font-bubblegum text-6xl md:text-8xl font-bold mb-4 bubble-text-gradient animate-pulse-glow">
-          Sarah Chen
+          Sumaira Hafeez
         </h1>
         
-        <div className="font-comic text-2xl md:text-3xl text-black mb-6 typewriter">
+        <div className="font-comic text-2xl md:text-3xl text-black mb-6 typewriter dark:from-gray-900 dark:via-gray-800 dark:to-purple-900/20">
           Frontend Developer & AI/ML Engineer
         </div>
         
         <p className="font-comic text-lg md:text-xl text-gray-700 mb-8 max-w-2xl mx-auto leading-relaxed">
-          ✨ Crafting <span className="text-bubble-pink font-bold">Beautiful Interfaces</span> with <span className="text-aqua-blue font-bold">Intelligent Solutions</span> ✨
+           Crafting <span className="text-bubble-pink font-bold">Beautiful Interfaces</span> with <span className="text-aqua-blue font-bold">Intelligent Solutions</span> 
           <br />
           <span className="text-sm">Powered by coffee, creativity, and a love for pixel-perfect design! 💖</span>
         </p>
@@ -65,7 +65,7 @@ const Hero = () => {
             variant="outline"
             className="bounce-button border-4 border-aqua-blue text-aqua-blue hover:bg-aqua-blue hover:text-black font-comic text-lg px-8 py-4 rounded-full shadow-lg"
           >
-            💌 Let's Connect
+            💌 Download Resume
           </Button>
         </div>
 
