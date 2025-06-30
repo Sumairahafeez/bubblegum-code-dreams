@@ -16,28 +16,28 @@ const Projects = () => {
       image: "🎨",
       gradient: "from-bubble-pink to-hot-pink dark:from-purple-500 dark:to-pink-500",
       category: "ai",
-      demoUrl: "https://student-mental-health-predictor.streamlit.app",
-      codeUrl: "https://github.com/Sumairahafeez/student-mental-health-predictor"
+      demoUrl: "https://sumairahafeez-mental-health-chatbot-app-flf43s.streamlit.app/",
+      codeUrl: "https://github.com/Sumairahafeez/mental-health-chatbot"
     },
     {
-      title: "Bubbly Dashboard",
-      description: "An interactive data visualization dashboard with playful animations and real-time updates for e-commerce analytics.",
-      tech: ["Vue.js", "D3.js", "Tailwind", "Chart.js"],
-      image: "📊",
+      title: "Books Recommendation System",
+      description: "A machine learning model that recommends books based on user preferences and reading history.",
+      tech: ["streamlit", "scikit-learn", "Python", "GeminiPI"],
+      image: "📚",
       gradient: "from-aqua-blue to-neon-green dark:from-blue-500 dark:to-green-500",
-      category: "frontend",
-      demoUrl: "https://bubbly-dashboard-demo.vercel.app",
-      codeUrl: "https://github.com/Sumairahafeez/bubbly-dashboard"
+      category: "ai",
+      demoUrl: "https://github.com/Sumairahafeez/Books_Recommendation",
+      codeUrl: "https://github.com/Sumairahafeez/Books_Recommendation"
     },
     {
-      title: "Kawaii Mobile App Design",
-      description: "A complete UI/UX design system for a productivity app with cute animations, custom illustrations, and user research insights.",
-      tech: ["Figma", "Adobe XD", "Principle", "InVision"],
+      title: "CosmicDB",
+      description: "A complete document based database management system with a user-friendly interface for managing and querying data. Built with python ",
+      tech: ["python", "Flask", "WAL logic", "Database"],
       image: "💕",
       gradient: "from-lemon-yellow to-bubble-pink dark:from-yellow-500 dark:to-purple-500",
-      category: "uiux",
-      demoUrl: "https://www.figma.com/proto/kawaii-productivity-app",
-      codeUrl: "https://github.com/Sumairahafeez/kawaii-app-design"
+      category: "frontend",
+      demoUrl: "https://www.youtube.com/watch?v=yGYoe2wV0tM",
+      codeUrl: "https://github.com/Sumairahafeez/COSMICDB"
     },
     {
       title: "Sentiment Bubble Bot",

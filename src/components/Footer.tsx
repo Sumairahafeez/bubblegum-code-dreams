@@ -23,7 +23,7 @@ const Footer = () => {
         {/* Footer Content */}
         <div className="text-center space-y-4">
           <div className="font-bubblegum text-3xl font-bold bubble-text-gradient">
-            Sarah Chen
+            Sumaira Hafeez
           </div>
           
           <p className="font-comic text-gray-700 flex items-center justify-center gap-2">
@@ -32,7 +32,7 @@ const Footer = () => {
           </p>
           
           <div className="font-comic text-sm text-gray-500">
-            © 2024 Sarah Chen. All rights reserved. ✨
+            © 2025 Sumaira Hafeez. All rights reserved. ✨
           </div>
           
           <div className="font-comic text-xs text-gray-400">
