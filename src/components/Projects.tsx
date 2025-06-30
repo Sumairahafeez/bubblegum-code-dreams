@@ -40,12 +40,12 @@ const Projects = () => {
       codeUrl: "https://github.com/Sumairahafeez/COSMICDB"
     },
     {
-      title: "Sentiment Bubble Bot",
-      description: "A chatbot that analyzes text sentiment and responds with emoji-filled messages. Built with NLP and a kawaii UI!",
-      tech: ["React", "NLP", "Python", "WebSocket"],
-      image: "🤖",
+      title: "Color Hunt Game UI",
+      description: "A fun and interactive color hierarchy hunt game's UI designed using Adobe illustrator.",
+      tech: ["Adobe illustrator", "Freepik"],
+      image: "🎨",
       gradient: "from-lemon-yellow to-bubble-pink dark:from-yellow-500 dark:to-purple-500",
-      category: "ai",
+      category: "uiux",
       demoUrl: "https://sentiment-bubble-bot.netlify.app",
       codeUrl: "https://github.com/Sumairahafeez/sentiment-bubble-bot"
     },

@@ -4,45 +4,45 @@ import { Heart, Calendar, MapPin, Users } from 'lucide-react';
 const Volunteer = () => {
   const experiences = [
     {
-      organization: "Girls Who Code",
-      role: "Volunteer Instructor",
-      duration: "2023 - Present",
-      location: "Remote",
-      description: "Teaching young girls programming fundamentals and inspiring them to pursue careers in tech.",
-      impact: "Mentored 50+ students",
-      skills: ["Teaching", "Mentoring", "JavaScript", "Python"],
+      organization: "coming soon",
+      role: "coming soon",
+      duration: "upcoming",
+      location: "upcoming",
+      description: "upcoming",
+      impact: "upcoming",
+      skills: [],
       color: "from-bubble-pink to-hot-pink dark:from-purple-500 dark:to-pink-500"
     },
-    {
-      organization: "Code for Good",
-      role: "Frontend Developer",
-      duration: "2022 - 2023",
-      location: "San Francisco, CA",
-      description: "Developed responsive websites for local non-profits to increase their online presence and donations.",
-      impact: "Built 8 websites",
-      skills: ["React", "UI/UX Design", "Responsive Design"],
-      color: "from-aqua-blue to-neon-green dark:from-blue-500 dark:to-green-500"
-    },
-    {
-      organization: "Tech Women Network",
-      role: "Workshop Facilitator",
-      duration: "2022 - Present",
-      location: "Bay Area, CA",
-      description: "Organizing and facilitating AI/ML workshops for women transitioning into tech careers.",
-      impact: "Trained 200+ women",
-      skills: ["Machine Learning", "Public Speaking", "Curriculum Design"],
-      color: "from-lemon-yellow to-bubble-pink dark:from-yellow-500 dark:to-purple-500"
-    },
-    {
-      organization: "Local Animal Shelter",
-      role: "Web Developer",
-      duration: "2021 - 2022",
-      location: "San Francisco, CA",
-      description: "Created an adoption management system to streamline the pet adoption process.",
-      impact: "Increased adoptions by 30%",
-      skills: ["Full Stack Development", "Database Design", "User Research"],
-      color: "from-hot-pink to-aqua-blue dark:from-pink-500 dark:to-blue-500"
-    }
+    // {
+    //   organization: "Code for Good",
+    //   role: "Frontend Developer",
+    //   duration: "2022 - 2023",
+    //   location: "San Francisco, CA",
+    //   description: "Developed responsive websites for local non-profits to increase their online presence and donations.",
+    //   impact: "Built 8 websites",
+    //   skills: ["React", "UI/UX Design", "Responsive Design"],
+    //   color: "from-aqua-blue to-neon-green dark:from-blue-500 dark:to-green-500"
+    // },
+    // {
+    //   organization: "Tech Women Network",
+    //   role: "Workshop Facilitator",
+    //   duration: "2022 - Present",
+    //   location: "Bay Area, CA",
+    //   description: "Organizing and facilitating AI/ML workshops for women transitioning into tech careers.",
+    //   impact: "Trained 200+ women",
+    //   skills: ["Machine Learning", "Public Speaking", "Curriculum Design"],
+    //   color: "from-lemon-yellow to-bubble-pink dark:from-yellow-500 dark:to-purple-500"
+    // },
+    // {
+    //   organization: "Local Animal Shelter",
+    //   role: "Web Developer",
+    //   duration: "2021 - 2022",
+    //   location: "San Francisco, CA",
+    //   description: "Created an adoption management system to streamline the pet adoption process.",
+    //   impact: "Increased adoptions by 30%",
+    //   skills: ["Full Stack Development", "Database Design", "User Research"],
+    //   color: "from-hot-pink to-aqua-blue dark:from-pink-500 dark:to-blue-500"
+    // }
   ];
 
   return (
@@ -134,7 +134,7 @@ const Volunteer = () => {
               I'm always looking for new opportunities to give back to the tech community!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bounce-button bg-gradient-to-r from-bubble-pink to-hot-pink dark:from-purple-600 dark:to-pink-600 hover:from-hot-pink hover:to-bubble-pink dark:hover:from-purple-700 dark:hover:to-pink-700 text-white font-comic text-lg px-6 py-3 rounded-full border-4 border-black dark:border-white shadow-lg">
+              <button className="bounce-button bg-gradient-to-r from-bubble-pink to-hot-pink dark:from-purple-600 dark:to-pink-600 hover:from-hot-pink hover:to-bubble-pink dark:hover:from-purple-700 dark:hover:to-pink-700 text-white font-comic text-lg px-6 py-3 rounded-full border-4 border-black dark:border-white shadow-lg" onClick={() => window.open('https://www.linkedin.com/in/sumaira-hafeez-9974a6290/', '_blank')}>
                 <Heart className="w-5 h-5 mr-2 inline" />
                 Let's Collaborate!
               </button>
