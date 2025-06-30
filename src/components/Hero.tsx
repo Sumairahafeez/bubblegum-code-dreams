@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Sparkles, Heart, Zap } from 'lucide-react';
-
+import resume from '../assets/resume.pdf'; // Adjust the path as necessary
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -49,7 +49,7 @@ const Hero = () => {
         <p className="font-comic text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
           ✨ Crafting <span className="text-bubble-pink dark:text-purple-400 font-bold">Beautiful Interfaces</span> with <span className="text-aqua-blue dark:text-blue-400 font-bold">Intelligent Solutions</span> ✨
           <br />
-          <span className="text-sm">Powered by coffee, creativity, and a love for pixel-perfect design! 💖</span>
+          <span className="text-sm">Powered by coffee, creativity, and a love for pixel-perfect design!</span>
         </p>
 
         {/* CTA Buttons */}
@@ -58,11 +58,12 @@ const Hero = () => {
             onClick={scrollToProjects}
             className="bounce-button bg-bubble-pink hover:bg-hot-pink dark:bg-purple-600 dark:hover:bg-purple-700 text-white font-comic text-lg px-8 py-4 rounded-full border-4 border-black dark:border-white shadow-lg"
           >
-            🚀 Explore My Work
+             Explore My Work
           </Button>
           
           <Button 
             variant="outline"
+            onClick={() => window.open(resume, '_blank')}
             className="bounce-button border-4 border-aqua-blue dark:border-blue-400 text-aqua-blue dark:text-blue-400 hover:bg-aqua-blue hover:text-black dark:hover:bg-blue-400 dark:hover:text-black font-comic text-lg px-8 py-4 rounded-full shadow-lg"
           >
             💌 Download Resume
