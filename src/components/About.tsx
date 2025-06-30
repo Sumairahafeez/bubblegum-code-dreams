@@ -6,7 +6,7 @@ const About = () => {
     { icon: Code, name: 'Frontend Magic', color: 'text-bubble-pink dark:text-purple-400' },
     { icon: Brain, name: 'AI/ML Wizardry', color: 'text-aqua-blue dark:text-blue-400' },
     { icon: Coffee, name: 'Coffee-Driven Development', color: 'text-lemon-yellow dark:text-yellow-400' },
-    { icon: Heart, name: 'Pixel-Perfect Passion', color: 'text-hot-pink dark:text-pink-400' }
+    { icon: Heart, name: 'Pixel-Perfect Designing', color: 'text-hot-pink dark:text-pink-400' }
   ];
 
   return (
@@ -24,7 +24,7 @@ const About = () => {
           <div className="space-y-6">
             <div className="card-hover bg-white dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-8 shadow-xl border-4 border-dashed border-bubble-pink/30 dark:border-purple-400/30">
               <h3 className="font-comic text-2xl font-bold text-bubble-pink dark:text-purple-400 mb-4">
-                Hey there, I'm Sarah! 👋
+                Hey there, I'm Sumaira! 👋
               </h3>
               <div className="font-comic text-gray-700 dark:text-gray-300 leading-relaxed space-y-4">
                 <p>
@@ -38,7 +38,7 @@ const About = () => {
                   into digital reality!
                 </p>
                 <p className="text-hot-pink dark:text-pink-400 font-bold">
-                  Fun fact: I love designing interfaces that make users smile! 😊
+                  Fun fact: I love designing interfaces that make users smile! 
                 </p>
               </div>
             </div>
@@ -69,7 +69,7 @@ const About = () => {
               My Tech Toolbox 🛠️
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {['React', 'TypeScript', 'TensorFlow', 'Python', 'Tailwind CSS', 'Node.js', 'PyTorch', 'Figma'].map((tech, index) => (
+              {['React', 'JavaScript', 'Winform', 'Python', 'Tailwind CSS', 'Node.js', 'Bootstrap', 'Adobe illustrator', 'Adobe Aftereffects','Flask','scikit-learn','react-native','expo', 'express js','github','gitlab'].map((tech, index) => (
                 <div 
                   key={tech}
                   className={`bounce-button bg-gradient-to-r from-bubble-pink/20 to-aqua-blue/20 dark:from-purple-500/20 dark:to-blue-500/20 rounded-full px-4 py-2 text-center font-comic font-bold text-gray-800 dark:text-gray-200 border-2 border-dashed border-bubble-pink/50 dark:border-purple-400/50 hover:border-solid`}
