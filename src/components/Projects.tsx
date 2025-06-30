@@ -15,7 +15,9 @@ const Projects = () => {
       tech: ["streamlit", "scikit-learn", "Python", "GeminiPI"],
       image: "🎨",
       gradient: "from-bubble-pink to-hot-pink dark:from-purple-500 dark:to-pink-500",
-      category: "ai"
+      category: "ai",
+      demoUrl: "https://student-mental-health-predictor.streamlit.app",
+      codeUrl: "https://github.com/Sumairahafeez/student-mental-health-predictor"
     },
     {
       title: "Bubbly Dashboard",
@@ -23,7 +25,9 @@ const Projects = () => {
       tech: ["Vue.js", "D3.js", "Tailwind", "Chart.js"],
       image: "📊",
       gradient: "from-aqua-blue to-neon-green dark:from-blue-500 dark:to-green-500",
-      category: "frontend"
+      category: "frontend",
+      demoUrl: "https://bubbly-dashboard-demo.vercel.app",
+      codeUrl: "https://github.com/Sumairahafeez/bubbly-dashboard"
     },
     {
       title: "Kawaii Mobile App Design",
@@ -31,7 +35,9 @@ const Projects = () => {
       tech: ["Figma", "Adobe XD", "Principle", "InVision"],
       image: "💕",
       gradient: "from-lemon-yellow to-bubble-pink dark:from-yellow-500 dark:to-purple-500",
-      category: "uiux"
+      category: "uiux",
+      demoUrl: "https://www.figma.com/proto/kawaii-productivity-app",
+      codeUrl: "https://github.com/Sumairahafeez/kawaii-app-design"
     },
     {
       title: "Sentiment Bubble Bot",
@@ -39,7 +45,9 @@ const Projects = () => {
       tech: ["React", "NLP", "Python", "WebSocket"],
       image: "🤖",
       gradient: "from-lemon-yellow to-bubble-pink dark:from-yellow-500 dark:to-purple-500",
-      category: "ai"
+      category: "ai",
+      demoUrl: "https://sentiment-bubble-bot.netlify.app",
+      codeUrl: "https://github.com/Sumairahafeez/sentiment-bubble-bot"
     },
     {
       title: "Pastel Portfolio CMS",
@@ -47,7 +55,9 @@ const Projects = () => {
       tech: ["Next.js", "MongoDB", "Cloudinary", "Framer Motion"],
       image: "💖",
       gradient: "from-hot-pink to-aqua-blue dark:from-pink-500 dark:to-blue-500",
-      category: "frontend"
+      category: "frontend",
+      demoUrl: "https://pastel-portfolio-cms.vercel.app",
+      codeUrl: "https://github.com/Sumairahafeez/pastel-portfolio-cms"
     },
     {
       title: "Beauty Brand Design System",
@@ -55,7 +65,9 @@ const Projects = () => {
       tech: ["Sketch", "Figma", "Adobe Creative Suite", "Zeplin"],
       image: "✨",
       gradient: "from-bubble-pink to-neon-green dark:from-purple-500 dark:to-green-500",
-      category: "uiux"
+      category: "uiux",
+      demoUrl: "https://beauty-brand-showcase.netlify.app",
+      codeUrl: "https://github.com/Sumairahafeez/beauty-brand-system"
     },
     {
       title: "Kawaii Weather App",
@@ -63,7 +75,9 @@ const Projects = () => {
       tech: ["React", "OpenWeather API", "CSS3", "Framer Motion"],
       image: "🌈",
       gradient: "from-lemon-yellow to-aqua-blue dark:from-yellow-500 dark:to-blue-500",
-      category: "frontend"
+      category: "frontend",
+      demoUrl: "https://kawaii-weather.vercel.app",
+      codeUrl: "https://github.com/Sumairahafeez/kawaii-weather-app"
     },
     {
       title: "ML Recipe Generator",
@@ -71,7 +85,9 @@ const Projects = () => {
       tech: ["Python", "TensorFlow", "Flask", "React"],
       image: "🍰",
       gradient: "from-bubble-pink to-neon-green dark:from-purple-500 dark:to-green-500",
-      category: "ai"
+      category: "ai",
+      demoUrl: "https://ml-recipe-generator.herokuapp.com",
+      codeUrl: "https://github.com/Sumairahafeez/ml-recipe-generator"
     },
     {
       title: "E-commerce App Redesign",
@@ -79,7 +95,9 @@ const Projects = () => {
       tech: ["Figma", "Miro", "Hotjar", "Maze"],
       image: "🛍️",
       gradient: "from-hot-pink to-aqua-blue dark:from-pink-500 dark:to-blue-500",
-      category: "uiux"
+      category: "uiux",
+      demoUrl: "https://www.figma.com/proto/ecommerce-redesign",
+      codeUrl: "https://github.com/Sumairahafeez/ecommerce-redesign"
     },
     {
       title: "Bubbly Task Manager",
@@ -87,7 +105,9 @@ const Projects = () => {
       tech: ["React", "TypeScript", "Tailwind", "Firebase"],
       image: "📝",
       gradient: "from-hot-pink to-lemon-yellow dark:from-pink-500 dark:to-yellow-500",
-      category: "frontend"
+      category: "frontend",
+      demoUrl: "https://bubbly-tasks.vercel.app",
+      codeUrl: "https://github.com/Sumairahafeez/bubbly-task-manager"
     },
     {
       title: "Smart Mirror UI",
@@ -95,7 +115,9 @@ const Projects = () => {
       tech: ["React", "Raspberry Pi", "Python", "Speech API"],
       image: "🪞",
       gradient: "from-aqua-blue to-bubble-pink dark:from-blue-500 dark:to-purple-500",
-      category: "ai"
+      category: "ai",
+      demoUrl: "https://smart-mirror-ui.netlify.app",
+      codeUrl: "https://github.com/Sumairahafeez/smart-mirror-ui"
     },
     {
       title: "Dating App Prototype",
@@ -103,7 +125,9 @@ const Projects = () => {
       tech: ["Figma", "Principle", "UserTesting", "Maze"],
       image: "💌",
       gradient: "from-bubble-pink to-lemon-yellow dark:from-purple-500 dark:to-yellow-500",
-      category: "uiux"
+      category: "uiux",
+      demoUrl: "https://www.figma.com/proto/dating-app-prototype",
+      codeUrl: "https://github.com/Sumairahafeez/dating-app-prototype"
     }
   ];
 
@@ -235,10 +259,10 @@ const Projects = () => {
                   )}
                 </div>
 
-                {/* Action Buttons - Smaller */}
+                {/* Action Buttons - Updated with real links */}
                 <div className="flex gap-2">
                   <Button 
-                  onClick={() => window.open('https://example.com/demo', '_blank')}
+                    onClick={() => window.open(project.demoUrl, '_blank')}
                     size="sm"
                     className="bounce-button bg-bubble-pink hover:bg-hot-pink dark:bg-purple-600 dark:hover:bg-purple-700 text-white font-comic rounded-full border-2 border-black dark:border-white text-xs px-3 py-1"
                   >
@@ -246,6 +270,7 @@ const Projects = () => {
                     Demo
                   </Button>
                   <Button 
+                    onClick={() => window.open(project.codeUrl, '_blank')}
                     size="sm"
                     variant="outline"
                     className="bounce-button border-2 border-aqua-blue dark:border-blue-400 text-aqua-blue dark:text-blue-400 hover:bg-aqua-blue hover:text-black dark:hover:bg-blue-400 dark:hover:text-black font-comic rounded-full text-xs px-3 py-1"
