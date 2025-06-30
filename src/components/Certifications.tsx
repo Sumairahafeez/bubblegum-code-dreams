@@ -22,7 +22,7 @@ const Certifications = () => {
     },
     {
       title: "MongoDb Certificate",
-      issuer: "SKLearn",
+      issuer: "Great Learning Academy",
       date: "2024",
       image: "../assets/mongodb.png",
       credentialUrl: "#",
@@ -30,7 +30,7 @@ const Certifications = () => {
     },
     {
       title: "MySQL Certificate",
-      issuer: "SKlearn",
+      issuer: "Great Learning Academy",
       date: "2024",
       image: "../assets/mysql.png",
       credentialUrl: "#",
