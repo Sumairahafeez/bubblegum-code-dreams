@@ -10,9 +10,9 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "AI-Powered Fashion Finder",
-      description: "A smart fashion recommendation system using computer vision and ML to suggest outfits based on style preferences and body type.",
-      tech: ["React", "TensorFlow.js", "Python", "FastAPI"],
+      title: "AI-Powered Student Mental Health Predictor",
+      description: "A machine learning model that predicts student mental health issues based on various factors such as academic performance, social interactions, and personal well-being.",
+      tech: ["streamlit", "scikit-learn", "Python", "GeminiPI"],
       image: "🎨",
       gradient: "from-bubble-pink to-hot-pink dark:from-purple-500 dark:to-pink-500",
       category: "ai"
@@ -238,6 +238,7 @@ const Projects = () => {
                 {/* Action Buttons - Smaller */}
                 <div className="flex gap-2">
                   <Button 
+                  onClick={() => window.open('https://example.com/demo', '_blank')}
                     size="sm"
                     className="bounce-button bg-bubble-pink hover:bg-hot-pink dark:bg-purple-600 dark:hover:bg-purple-700 text-white font-comic rounded-full border-2 border-black dark:border-white text-xs px-3 py-1"
                   >
@@ -264,7 +265,7 @@ const Projects = () => {
             <h3 className="font-comic text-2xl font-bold bubble-text-gradient mb-4">
               Want to see more? 👀
             </h3>
-            <Button className="bounce-button bg-gradient-to-r from-bubble-pink to-aqua-blue dark:from-purple-600 dark:to-blue-600 hover:from-hot-pink hover:to-neon-green dark:hover:from-purple-700 dark:hover:to-blue-700 text-white font-comic text-lg px-8 py-3 rounded-full border-4 border-black dark:border-white shadow-lg">
+            <Button onClick={() => window.open('https://github.com/Sumairahafeez', '_blank')} className="bounce-button bg-gradient-to-r from-bubble-pink to-aqua-blue dark:from-purple-600 dark:to-blue-600 hover:from-hot-pink hover:to-neon-green dark:hover:from-purple-700 dark:hover:to-blue-700 text-white font-comic text-lg px-8 py-3 rounded-full border-4 border-black dark:border-white shadow-lg">
               <Github className="w-5 h-5 mr-2" />
               Check out my GitHub!
             </Button>

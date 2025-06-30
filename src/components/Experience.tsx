@@ -4,39 +4,64 @@ import { Calendar, MapPin, Briefcase } from 'lucide-react';
 const Experience = () => {
   const experiences = [
     {
-      title: 'Senior Frontend Developer',
-      company: 'TechCorp Solutions',
-      location: 'San Francisco, CA',
-      period: '2022 - Present',
-      description: 'Lead frontend development for enterprise applications using React, TypeScript, and modern web technologies. Collaborated with cross-functional teams to deliver pixel-perfect user experiences.',
+      title: 'Software Engineer Apprentice',
+      company: 'Headstarter AI',
+      location: 'Remote',
+      period: 'July 2024 - September 2024',
+      description: 'Lead frontend development for enterprise applications using React, JavaScript, and modern web technologies. Collaborated with cross-functional teams to deliver pixel-perfect user experiences.',
       achievements: [
-        'Improved application performance by 40%',
-        'Led a team of 5 developers',
+        'Developed a landing page that increased user engagement',
+        'Improved Communication with other teams',
         'Implemented responsive design systems'
       ]
     },
     {
-      title: 'AI/ML Engineer',
-      company: 'DataMind Inc.',
-      location: 'Austin, TX',
-      period: '2020 - 2022',
-      description: 'Developed machine learning models for predictive analytics and natural language processing. Built end-to-end ML pipelines using Python, TensorFlow, and cloud services.',
+      title: 'Teaching Assistant',
+      company: 'UET Lahore',
+      location: 'Lahore, Pakistan',
+      period: 'sep,2024 - June,2025',
+      description: 'Assisted students in understanding core programming concepts, debugging code, and improving problem-solving skills. Conducted lab sessions and provided one-on-one mentoring.',
       achievements: [
-        'Deployed 10+ ML models to production',
-        'Reduced model training time by 60%',
-        'Published 3 research papers'
+        'Provided guidance on Programming Fundamentals, Object-Oriented Programming (OOP) concepts.',
+        'Helped students with debugging and code optimization.',
+        'Organized coding workshops and study groups to enhance learning outcomes.',
+        'Evaluated assignments, provided constructive feedback, and helped students improve their coding efficiency.'
       ]
     },
     {
-      title: 'Junior Developer',
-      company: 'StartupHub',
-      location: 'Remote',
-      period: '2019 - 2020',
-      description: 'Full-stack development for startup projects. Worked with React, Node.js, and MongoDB to create scalable web applications.',
+      title: 'Game UI/UX Designer',
+      company: 'UET Game Studio',
+      location: 'Lahore, Pakistan',
+      period: 'March,2025 - present',
+      description: 'Developed user interfaces and experiences for web games, focusing on intuitive navigation and engaging visuals. Collaborated with game developers to ensure seamless integration of UI elements.',
       achievements: [
-        'Built 5 full-stack applications',
-        'Improved code quality with testing',
-        'Mentored 2 junior developers'
+        'Designed and implemented UI for unity based web games',
+        'Conducted user research and testing to improve gameplay experience',
+        'Collaborated with artists to create visually appealing game assets'
+      ]
+    },
+     {
+      title: 'odoo Developer trainee',
+      company: 'Ustadam',
+      location: 'Lahore, Pakistan',
+      period: 'May,2024 - June,2024',
+      description: 'Assisted in the development of Odoo modules and customizations, focusing on enhancing user experience and functionality. Collaborated with senior developers to implement best practices in Odoo development.',
+      achievements: [
+        'Gained hands-on experience with Odoo framework and development environment',
+        'Contributed to the customization of Odoo modules to meet client requirements',
+        'Participated in code reviews and learned about Odoo best practices'
+      ]
+    },
+    {
+      title: 'Graphic Designer Intern',
+      company: 'Bayyinah TV',
+      location: 'Remote',
+      period: 'July,2025 - present',
+      description: 'upcoming internship focused on creating visually appealing graphics for educational content. Collaborating with the marketing team to design promotional materials and enhance brand visibility.',
+      achievements: [
+        'Gained hands-on experience with graphic design tools and software',
+        'Contributed to the creation of engaging visual content for social media',
+        'Participated in brainstorming sessions to develop creative concepts'
       ]
     }
   ];

@@ -1,14 +1,14 @@
 
 import { Download, FileText, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
+import resume from '../assets/resume.pdf'; // Adjust the path as necessary
 const DownloadResume = () => {
   const handleDownload = () => {
     // In a real scenario, you would link to your actual resume file
-    const resumeUrl = '/resume.pdf'; // You'll need to add your resume file to the public folder
+    const resumeUrl = resume; // You'll need to add your resume file to the public folder
     const link = document.createElement('a');
     link.href = resumeUrl;
-    link.download = 'Sarah_Johnson_Resume.pdf';
+    link.download = 'Sumaira_Hafeez_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -41,7 +41,7 @@ const DownloadResume = () => {
             </Button>
             
             <p className="font-comic text-sm text-gray-500 dark:text-gray-400 mt-4">
-              PDF • Updated December 2024
+              PDF • Updated June 2025
             </p>
           </div>
         </div>
