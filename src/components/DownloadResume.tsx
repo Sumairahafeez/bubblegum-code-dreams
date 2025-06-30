@@ -20,7 +20,7 @@ const DownloadResume = () => {
         <div className="max-w-2xl mx-auto text-center">
           <div className="card-hover bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-8 shadow-xl border-4 border-dashed border-bubble-pink/30 dark:border-purple-400/30">
             <div className="mb-6">
-              <div className="w-20 h-20 bg-gradient-to-br from-bubble-pink to-aqua-blue rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-20 h-20 bg-gradient-to-br from-bubble-pink to-aqua-blue dark:from-purple-500 dark:to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <FileText className="w-10 h-10 text-white" />
               </div>
               <h3 className="font-bubblegum text-3xl font-bold bubble-text-gradient mb-2">
@@ -33,7 +33,7 @@ const DownloadResume = () => {
             
             <Button
               onClick={handleDownload}
-              className="bounce-button bg-gradient-to-r from-bubble-pink to-aqua-blue hover:from-hot-pink hover:to-bubble-pink text-white font-comic font-bold text-lg px-8 py-4 rounded-full border-none shadow-lg transition-all duration-300 hover:shadow-xl"
+              className="bounce-button bg-gradient-to-r from-bubble-pink to-aqua-blue dark:from-purple-600 dark:to-blue-600 hover:from-hot-pink hover:to-bubble-pink dark:hover:from-purple-700 dark:hover:to-blue-700 text-white font-comic font-bold text-lg px-8 py-4 rounded-full border-none shadow-lg transition-all duration-300 hover:shadow-xl"
             >
               <Download className="w-5 h-5 mr-2" />
               Download Resume
