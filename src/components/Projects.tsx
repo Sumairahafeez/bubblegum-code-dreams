@@ -46,7 +46,7 @@ const Projects = () => {
       image: "🎨",
       gradient: "from-lemon-yellow to-bubble-pink dark:from-yellow-500 dark:to-purple-500",
       category: "uiux",
-      demoUrl: "https://sentiment-bubble-bot.netlify.app",
+      demoUrl: "https://www.behance.net/gallery/229356003/COLORHUNT-UI",
       codeUrl: "https://github.com/Sumairahafeez/sentiment-bubble-bot"
     },
     {
@@ -119,16 +119,7 @@ const Projects = () => {
       demoUrl: "https://www.behance.net/gallery/229356609/Comic-Book-covers",
       codeUrl: "https://github.com/Sumairahafeez/smart-mirror-ui"
     },
-    {
-      title: "",
-      description: "User research and prototype design for a female-focused dating app with safety features and inclusive design principles.",
-      tech: ["Figma", "Principle", "UserTesting", "Maze"],
-      image: "💌",
-      gradient: "from-bubble-pink to-lemon-yellow dark:from-purple-500 dark:to-yellow-500",
-      category: "uiux",
-      demoUrl: "https://www.figma.com/proto/dating-app-prototype",
-      codeUrl: "https://github.com/Sumairahafeez/dating-app-prototype"
-    }
+   
   ];
 
   const categories = [
