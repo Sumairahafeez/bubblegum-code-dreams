@@ -50,23 +50,23 @@ const Projects = () => {
       codeUrl: "https://github.com/Sumairahafeez/sentiment-bubble-bot"
     },
     {
-      title: "Pastel Portfolio CMS",
-      description: "A content management system for creative portfolios with drag-and-drop functionality and Instagram-like filters.",
-      tech: ["Next.js", "MongoDB", "Cloudinary", "Framer Motion"],
+      title: "Rule based AI Chatbot",
+      description: "A rule-based AI chatbot for providing instant responses to user queries and assisting with common tasks.",
+      tech: ["react-native", "Ollama", "expo", "sqlite"],
       image: "💖",
       gradient: "from-hot-pink to-aqua-blue dark:from-pink-500 dark:to-blue-500",
-      category: "frontend",
-      demoUrl: "https://pastel-portfolio-cms.vercel.app",
-      codeUrl: "https://github.com/Sumairahafeez/pastel-portfolio-cms"
+      category: "ai",
+      demoUrl: "",
+      codeUrl: ""
     },
     {
-      title: "Beauty Brand Design System",
-      description: "Complete brand identity and design system for a sustainable beauty startup, including packaging and digital assets.",
-      tech: ["Sketch", "Figma", "Adobe Creative Suite", "Zeplin"],
-      image: "✨",
+      title: "Tower Defense Game UI",
+      description: "A visually stunning and immersive user interface for a tower defense game, featuring unique character designs and engaging animations.",
+      tech: ["Figma", "Adobe XD", "Unity"],
+      image: "🎮",
       gradient: "from-bubble-pink to-neon-green dark:from-purple-500 dark:to-green-500",
       category: "uiux",
-      demoUrl: "https://beauty-brand-showcase.netlify.app",
+      demoUrl: "https://portal.uetgamestudio.com/",
       codeUrl: "https://github.com/Sumairahafeez/beauty-brand-system"
     },
     {
