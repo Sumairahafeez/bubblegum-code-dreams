@@ -1,5 +1,5 @@
 
-import { Heart, Calendar, MapPin, Users } from 'lucide-react';
+import { Heart, Calendar, MapPin, Users, OrigamiIcon } from 'lucide-react';
 
 const Volunteer = () => {
   const experiences = [
@@ -22,6 +22,16 @@ const Volunteer = () => {
       impact: "Provided guidance on Programming Fundamentals, Object-Oriented Programming (OOP) concepts.",
       skills: ["Programming", "Mentoring", "Debugging","Leadership"],
       color: "from-aqua-blue to-neon-green dark:from-blue-500 dark:to-green-500"
+    },
+    {
+      organization: "UET XNEWS",
+      role: "Photographer",
+      duration: "2023 - present",
+      location: "Lahore, Pakistan",
+      description: "Capturing and editing high-quality images for university events, news articles, and social media. Collaborating with the editorial team to create visually compelling stories.",
+      impact: "Contributed to the visual storytelling of university events and news, enhancing the overall engagement of the university community.",
+      skills: ["Photography", "Photo Editing", "Visual Storytelling"],
+      color: "from-lemon-yellow to-bubble-pink dark:from-yellow-500 dark:to-purple-500"
     }
     // {
     //   organization: "Code for Good",
