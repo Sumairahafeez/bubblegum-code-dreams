@@ -60,6 +60,16 @@ const Projects = () => {
       codeUrl: "https://github.com/Sumairahafeez/secure_file"
     },
     {
+      title: "Solitare Game",
+      description: "A classic solitaire card game implemented with React.",
+      tech: ["React", "tailwind-CSS","JavaScript","Material UI"],
+      image: "🃏",
+      gradient: "from-lemon-yellow to-bubble-pink dark:from-yellow-500 dark:to-purple-500",
+      category: "frontend",
+      demoUrl: "https://sumairahafeez.github.io/solitare/",
+      codeUrl: "https://github.com/Sumairahafeez/solitare"
+    },
+    {
       title: "Color Hunt Game UI",
       description: "A fun and interactive color hierarchy hunt game's UI designed using Adobe illustrator.",
       tech: ["Adobe illustrator", "Freepik"],
