@@ -10,9 +10,9 @@ const Experience = () => {
       period: 'July 2024 - September 2024',
       description: 'Lead frontend development for enterprise applications using React, JavaScript, and modern web technologies. Collaborated with cross-functional teams to deliver pixel-perfect user experiences.',
       achievements: [
-        'Developed a landing page that increased user engagement',
-        'Improved Communication with other teams',
-        'Implemented responsive design systems'
+      'Developed a landing page that increased user engagement',
+      'Improved Communication with other teams',
+      'Implemented responsive design systems'
       ]
     },
     {
@@ -22,10 +22,10 @@ const Experience = () => {
       period: 'sep,2024 - June,2025',
       description: 'Assisted students in understanding core programming concepts, debugging code, and improving problem-solving skills. Conducted lab sessions and provided one-on-one mentoring.',
       achievements: [
-        'Provided guidance on Programming Fundamentals, Object-Oriented Programming (OOP) concepts.',
-        'Helped students with debugging and code optimization.',
-        'Organized coding workshops and study groups to enhance learning outcomes.',
-        'Evaluated assignments, provided constructive feedback, and helped students improve their coding efficiency.'
+      'Provided guidance on Programming Fundamentals, Object-Oriented Programming (OOP) concepts.',
+      'Helped students with debugging and code optimization.',
+      'Organized coding workshops and study groups to enhance learning outcomes.',
+      'Evaluated assignments, provided constructive feedback, and helped students improve their coding efficiency.'
       ]
     },
     {
@@ -35,9 +35,9 @@ const Experience = () => {
       period: 'March,2025 - present',
       description: 'Developed user interfaces and experiences for web games, focusing on intuitive navigation and engaging visuals. Collaborated with game developers to ensure seamless integration of UI elements.',
       achievements: [
-        'Designed and implemented UI for unity based web games',
-        'Conducted user research and testing to improve gameplay experience',
-        'Collaborated with artists to create visually appealing game assets'
+      'Designed and implemented UI for unity based web games',
+      'Conducted user research and testing to improve gameplay experience',
+      'Collaborated with artists to create visually appealing game assets'
       ]
     },
      {
@@ -47,24 +47,25 @@ const Experience = () => {
       period: 'May,2024 - June,2024',
       description: 'Assisted in the development of Odoo modules and customizations, focusing on enhancing user experience and functionality. Collaborated with senior developers to implement best practices in Odoo development.',
       achievements: [
-        'Gained hands-on experience with Odoo framework and development environment',
-        'Contributed to the customization of Odoo modules to meet client requirements',
-        'Participated in code reviews and learned about Odoo best practices'
+      'Gained hands-on experience with Odoo framework and development environment',
+      'Contributed to the customization of Odoo modules to meet client requirements',
+      'Participated in code reviews and learned about Odoo best practices'
       ]
     },
     {
-      title: 'Graphic Designer Intern',
+      title: 'Marketing Intern',
       company: 'Bayyinah TV',
       location: 'Remote',
       period: 'July,2025 - present',
-      description: 'upcoming internship focused on creating visually appealing graphics for educational content. Collaborating with the marketing team to design promotional materials and enhance brand visibility.',
+      description: 'Currently interning with the marketing team to design and execute digital campaigns for educational content. Responsible for creating engaging graphics, managing social media posts, and analyzing campaign performance to optimize reach and engagement.',
       achievements: [
-        'Gained hands-on experience with graphic design tools and software',
-        'Contributed to the creation of engaging visual content for social media',
-        'Participated in brainstorming sessions to develop creative concepts'
+      'Designed promotional graphics and visual assets for digital campaigns',
+      'Managed and scheduled social media content to increase audience engagement',
+      'Analyzed campaign metrics and provided insights for optimization',
+      'Collaborated with the team to brainstorm and implement creative marketing strategies'
       ]
     }
-  ];
+    ];
 
   return (
     <section id="experience" className="py-20 bg-gradient-to-br from-aqua-blue/5 via-white to-bubble-pink/5 dark:from-gray-900 dark:via-gray-800 dark:to-purple-900/20">
