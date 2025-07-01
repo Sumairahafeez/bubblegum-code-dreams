@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Send, Mail, Github, Linkedin, Youtube, Heart } from 'lucide-react';
+import { Send, Mail, Github, Linkedin, Youtube, Heart, Pen } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
@@ -97,7 +97,7 @@ const Contact = () => {
       GitHub: 'https://github.com/Sumairahafeez',
       LinkedIn: 'https://www.linkedin.com/in/sumaira-hafeez-9974a6290/',
       Youtube: 'https://www.youtube.com/@SumairaHafeez-FPDEV',
-      Email: 'mailto:sumairahafeezfp@gmail.com'
+      Behance: 'https://www.behance.net/sumairahafeez/projects'
     };
     
     const url = links[platform as keyof typeof links];
@@ -115,7 +115,7 @@ const Contact = () => {
     { icon: Github, label: 'GitHub', color: 'text-gray-800 dark:text-gray-200', bg: 'bg-gray-100 dark:bg-gray-700' },
     { icon: Linkedin, label: 'LinkedIn', color: 'text-blue-600 dark:text-blue-400', bg: 'bg-blue-100 dark:bg-blue-900/30' },
     { icon: Youtube, label: 'Youtube', color: 'text-sky-500 dark:text-sky-400', bg: 'bg-sky-100 dark:bg-sky-900/30' },
-    { icon: Mail, label: 'Email', color: 'text-bubble-pink dark:text-purple-400', bg: 'bg-pink-100 dark:bg-purple-900/30' }
+    { icon: Pen, label: 'Behance', color: 'text-bubble-pink dark:text-purple-400', bg: 'bg-pink-100 dark:bg-purple-900/30' }
   ];
 
   return (
