@@ -40,6 +40,26 @@ const Projects = () => {
       codeUrl: "https://github.com/Sumairahafeez/COSMICDB"
     },
     {
+      title: "SpaceO",
+      description: "A Frontend application for a space exploration company, showcasing their services and projects. Built with React and Tailwind CSS.",
+      tech: ["React", "Tailwind CSS"],
+      image: "🌌",
+      gradient: "from-lemon-yellow to-bubble-pink dark:from-yellow-500 dark:to-purple-500",
+      category: "frontend",
+      demoUrl: "https://www.youtube.com/watch?v=jR5uCWMecQM",
+      codeUrl: "https://github.com/Sumairahafeez/SpaceO"
+    },
+    {
+      title: "Cyber File Sharing System",
+      description: "A secure file sharing system with end-to-end encryption and user authentication. Built with React and Flask.",
+      tech: ["React", "Flask", "VirusAPI", "RedisDB"],
+      image: "🔒",
+      gradient: "from-lemon-yellow to-bubble-pink dark:from-yellow-500 dark:to-purple-500",
+      category: "frontend",
+      demoUrl: "https://cyber-file-share.vercel.app/",
+      codeUrl: "https://github.com/Sumairahafeez/secure_file"
+    },
+    {
       title: "Color Hunt Game UI",
       description: "A fun and interactive color hierarchy hunt game's UI designed using Adobe illustrator.",
       tech: ["Adobe illustrator", "Freepik"],
