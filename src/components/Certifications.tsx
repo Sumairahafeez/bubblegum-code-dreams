@@ -43,14 +43,6 @@ const Certifications = () => {
       image: AI,
       credentialUrl: "#",
       skills: ["Scikit-learn", "AI", "Machine Learning"]
-    },
-    {
-      title: "Certified Ethical Hacker",
-      issuer: "EC-Council",
-      date: "2022",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop",
-      credentialUrl: "#",
-      skills: ["Cybersecurity", "Penetration Testing", "Network Security"]
     }
   ];
 

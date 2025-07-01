@@ -15,33 +15,20 @@ const Experience = () => {
       'Implemented responsive design systems'
       ]
     },
+      {
+        title: 'Game UI/UX Designer',
+        company: 'UET Game Studio',
+        location: 'Lahore, Pakistan',
+        period: 'March,2025 - present',
+        description: 'Developed user interfaces and experiences for web games, focusing on intuitive navigation and engaging visuals. Collaborated with game developers to ensure seamless integration of UI elements.',
+        achievements: [
+        'Designed and implemented UI for unity based web games',
+        'Conducted user research and testing to improve gameplay experience',
+        'Collaborated with artists to create visually appealing game assets'
+        ]
+      },
     {
-      title: 'Teaching Assistant',
-      company: 'UET Lahore',
-      location: 'Lahore, Pakistan',
-      period: 'sep,2024 - June,2025',
-      description: 'Assisted students in understanding core programming concepts, debugging code, and improving problem-solving skills. Conducted lab sessions and provided one-on-one mentoring.',
-      achievements: [
-      'Provided guidance on Programming Fundamentals, Object-Oriented Programming (OOP) concepts.',
-      'Helped students with debugging and code optimization.',
-      'Organized coding workshops and study groups to enhance learning outcomes.',
-      'Evaluated assignments, provided constructive feedback, and helped students improve their coding efficiency.'
-      ]
-    },
-    {
-      title: 'Game UI/UX Designer',
-      company: 'UET Game Studio',
-      location: 'Lahore, Pakistan',
-      period: 'March,2025 - present',
-      description: 'Developed user interfaces and experiences for web games, focusing on intuitive navigation and engaging visuals. Collaborated with game developers to ensure seamless integration of UI elements.',
-      achievements: [
-      'Designed and implemented UI for unity based web games',
-      'Conducted user research and testing to improve gameplay experience',
-      'Collaborated with artists to create visually appealing game assets'
-      ]
-    },
-     {
-      title: 'odoo Developer trainee',
+      title: 'Odoo Developer Trainee',
       company: 'Ustadam',
       location: 'Lahore, Pakistan',
       period: 'May,2024 - June,2024',
@@ -50,19 +37,6 @@ const Experience = () => {
       'Gained hands-on experience with Odoo framework and development environment',
       'Contributed to the customization of Odoo modules to meet client requirements',
       'Participated in code reviews and learned about Odoo best practices'
-      ]
-    },
-    {
-      title: 'Marketing Intern',
-      company: 'Bayyinah TV',
-      location: 'Remote',
-      period: 'July,2025 - present',
-      description: 'Currently interning with the marketing team to design and execute digital campaigns for educational content. Responsible for creating engaging graphics, managing social media posts, and analyzing campaign performance to optimize reach and engagement.',
-      achievements: [
-      'Designed promotional graphics and visual assets for digital campaigns',
-      'Managed and scheduled social media content to increase audience engagement',
-      'Analyzed campaign metrics and provided insights for optimization',
-      'Collaborated with the team to brainstorm and implement creative marketing strategies'
       ]
     }
     ];

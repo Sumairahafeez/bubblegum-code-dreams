@@ -4,15 +4,25 @@ import { Heart, Calendar, MapPin, Users } from 'lucide-react';
 const Volunteer = () => {
   const experiences = [
     {
-      organization: "coming soon",
-      role: "coming soon",
-      duration: "upcoming",
-      location: "upcoming",
-      description: "upcoming",
-      impact: "upcoming",
-      skills: [],
+      organization: "Bayyinah TV",
+      role: "Marketing Intern",
+      duration: "July-2025 - present",
+      location: "Remote",
+      description: "Currently interning with the marketing team to design and execute digital campaigns for educational content. Responsible for creating engaging graphics, managing social media posts, and analyzing campaign performance to optimize reach and engagement.",
+      impact: "Designed promotional graphics and visual assets for digital campaigns",
+      skills: ["Graphic Design", "Social Media Management", "Data Analysis","Subtitles"],
       color: "from-bubble-pink to-hot-pink dark:from-purple-500 dark:to-pink-500"
     },
+    {
+      organization: "UET Lahore",
+      role: "Teaching Assistant",
+      duration: "2023 - 2024",
+      location: "Lahore, Pakistan",
+      description: "Assisted students in understanding core programming concepts, debugging code, and improving problem-solving skills. Conducted lab sessions and provided one-on-one mentoring.",
+      impact: "Provided guidance on Programming Fundamentals, Object-Oriented Programming (OOP) concepts.",
+      skills: ["Programming", "Mentoring", "Debugging","Leadership"],
+      color: "from-aqua-blue to-neon-green dark:from-blue-500 dark:to-green-500"
+    }
     // {
     //   organization: "Code for Good",
     //   role: "Frontend Developer",
