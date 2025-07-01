@@ -70,6 +70,16 @@ const Projects = () => {
       codeUrl: "https://github.com/Sumairahafeez/solitare"
     },
     {
+      title: "Air Force Management System",
+      description: "A comprehensive management system for air force operations, including personnel management, mission planning, and logistics.",
+      tech: ["Winform", "C#","MSSQL"],
+      image: "🛩️",
+      gradient: "from-lemon-yellow to-bubble-pink dark:from-yellow-500 dark:to-purple-500",
+      category: "frontend",
+      demoUrl: "https://www.youtube.com/watch?v=9gCBCDd_ics",
+      codeUrl: "https://github.com/Sumairahafeez/Airforce_management_System"
+    },
+    {
       title: "Color Hunt Game UI",
       description: "A fun and interactive color hierarchy hunt game's UI designed using Adobe illustrator.",
       tech: ["Adobe illustrator", "Freepik"],
