@@ -209,6 +209,17 @@ const Projects = () => {
       demoUrl: "https://www.behance.net/gallery/229356609/Comic-Book-covers",
       codeUrl: "https://github.com/Sumairahafeez/smart-mirror-ui"
     },
+      {
+      title: "Brand mockups",
+      description: "A collection of brand mockups showcasing creativity and visual storytelling.",
+      tech: ["Adobe Photoshop", "Adobe Illustrator","generative art"],
+      image: "🎨",
+      gradient: "from-hot-pink to-lemon-yellow dark:from-pink-500 dark:to-yellow-500",
+      category: "uiux",
+      demoUrl: "https://www.behance.net/gallery/229783323/Brand-mockups",
+      codeUrl: "https://github.com/Sumairahafeez/smart-mirror-ui"
+    },
+    
      {
       title: "Illustrations",
       description: "A collection of illustrations showcasing creativity and visual storytelling.",
