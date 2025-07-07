@@ -6,7 +6,7 @@ const About = () => {
     { icon: Code, name: 'Frontend Magic', color: 'text-bubble-pink dark:text-purple-400' },
     { icon: Brain, name: 'AI/ML Wizardry', color: 'text-aqua-blue dark:text-blue-400' },
     { icon: Coffee, name: 'Coffee-Driven Development', color: 'text-lemon-yellow dark:text-yellow-400' },
-    { icon: Heart, name: 'Pixel-Perfect Designing', color: 'text-hot-pink dark:text-pink-400' }
+    { icon: Heart, name: 'Pixel-Perfect Art', color: 'text-hot-pink dark:text-pink-400' }
   ];
 
   return (
@@ -33,12 +33,12 @@ const About = () => {
                   should be both beautiful AND intelligent! 
                 </p>
                 <p>
-                  When I'm not crafting pixel-perfect UIs or training neural networks, you'll find me 
-                  experimenting with new design trends, sipping bubble tea 🧋, and turning creative ideas 
+                  When I'm not crafting frontend or training models, you'll find me 
+                  experimenting with new design trends, using generative images models to create digital art as hobbies, sipping bubble tea 🧋, and turning creative ideas 
                   into digital reality!
                 </p>
                 <p className="text-hot-pink dark:text-pink-400 font-bold">
-                  Fun fact: I love designing interfaces that make users smile! 
+                  Fun fact: I love crafting images with generative models that make users smile! 
                 </p>
               </div>
             </div>

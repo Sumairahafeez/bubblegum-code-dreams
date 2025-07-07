@@ -80,6 +80,56 @@ const Projects = () => {
       codeUrl: "https://github.com/Sumairahafeez/Airforce_management_System"
     },
     {
+      title: "Social Profile Card",
+      description: "A visually appealing social profile card design showcasing user information and interactions.",
+      tech: ["React", "Tailwind CSS", "Figma","Frontend Mentor"],
+      image: "👤",
+      gradient: "from-lemon-yellow to-bubble-pink dark:from-yellow-500 dark:to-purple-500",
+      category: "frontend",
+      demoUrl: "https://www.frontendmentor.io/solutions/social-links-profile-main-9VpZ3hh3XB",
+      codeUrl: "https://github.com/Sumairahafeez/Fronend-Mentor"
+    },
+    {
+      title: "Mortgage repayment calculator",
+      description: "A visually appealing and interactive mortgage repayment calculator web application.",
+      tech: ["React", "Tailwind CSS", "Figma","Frontend Mentor"],
+      image: "🏠",
+      gradient: "from-lemon-yellow to-bubble-pink dark:from-yellow-500 dark:to-purple-500",
+      category: "frontend",
+      demoUrl: "https://www.frontendmentor.io/solutions/mortgage-repayment-calculator-using-react-and-tailwind-css-8b1f2c3d4e",
+      codeUrl: "https://github.com/Sumairahafeez/Mortgage-Repayment-Calculator"
+    },
+     {
+      title: "Netflix Clone",
+      description: "A visually appealing and interactive Netflix clone web application.",
+      tech: ["React", "Tailwind CSS", "Figma","Frontend Mentor"],
+      image: "�",
+      gradient: "from-lemon-yellow to-bubble-pink dark:from-yellow-500 dark:to-purple-500",
+      category: "frontend",
+      demoUrl: "https://www.youtube.com/watch?v=-DogmFPlOtI",
+      codeUrl: "https://github.com/Sumairahafeez/Netflix-Clone"
+    },
+     {
+      title: "Discord Clone",
+      description: "A visually appealing and interactive Discord clone web application.",
+      tech: ["React", "Tailwind CSS", "Figma","Frontend Mentor"],
+      image: "�",
+      gradient: "from-lemon-yellow to-bubble-pink dark:from-yellow-500 dark:to-purple-500",
+      category: "frontend",
+      demoUrl: "https://sumairahafeez.github.io/Discord-clone-tailwind/",
+      codeUrl: "https://github.com/Sumairahafeez/Discord-clone-tailwind"
+    },
+     {
+      title: "Weather App",
+      description: "A visually appealing and interactive weather application.",
+      tech: ["React", "Tailwind CSS", "Figma","Frontend Mentor"],
+      image: "🌤️",
+      gradient: "from-lemon-yellow to-bubble-pink dark:from-yellow-500 dark:to-purple-500",
+      category: "frontend",
+      demoUrl: "https://weather-app-mu-one-62.vercel.app/",
+      codeUrl: "https://github.com/Sumairahafeez/Weather-App"
+    },
+    {
       title: "Color Hunt Game UI",
       description: "A fun and interactive color hierarchy hunt game's UI designed using Adobe illustrator.",
       tech: ["Adobe illustrator", "Freepik"],
@@ -152,13 +202,35 @@ const Projects = () => {
     {
       title: "Horror/Comic book designs",
       description: "A collection of horror and comic book cover designs, showcasing creativity and visual storytelling.",
-      tech: ["Adobe Photoshop", "Adobe Illustrator"],
+      tech: ["Adobe Photoshop", "Adobe Illustrator","generative art"],
       image: "📚",
       gradient: "from-hot-pink to-lemon-yellow dark:from-pink-500 dark:to-yellow-500",
       category: "uiux",
       demoUrl: "https://www.behance.net/gallery/229356609/Comic-Book-covers",
       codeUrl: "https://github.com/Sumairahafeez/smart-mirror-ui"
     },
+     {
+      title: "Illustrations",
+      description: "A collection of illustrations showcasing creativity and visual storytelling.",
+      tech: ["Adobe Photoshop", "Adobe Illustrator","generative art"],
+      image: "🎨",
+      gradient: "from-hot-pink to-lemon-yellow dark:from-pink-500 dark:to-yellow-500",
+      category: "uiux",
+      demoUrl: "https://www.behance.net/gallery/229779257/Illustrations",
+      codeUrl: "https://github.com/Sumairahafeez/smart-mirror-ui"
+    },
+    {
+      title: "Character Designs",
+      description: "A collection of character designs of comic characters showcasing creativity and visual storytelling.",
+      tech: ["Adobe Photoshop", "Adobe Illustrator","generative art"],
+      image: "👾",
+      gradient: "from-hot-pink to-lemon-yellow dark:from-pink-500 dark:to-yellow-500",
+      category: "uiux",
+      demoUrl: "https://www.behance.net/gallery/229779021/Comic-characters",
+      codeUrl: "https://github.com/Sumairahafeez/smart-mirror-ui"
+    },
+    
+
    
   ];
 
@@ -166,7 +238,7 @@ const Projects = () => {
     { id: 'all', label: 'All Projects', emoji: '✨' },
     { id: 'ai', label: 'AI/ML', emoji: '🤖' },
     { id: 'frontend', label: 'Frontend', emoji: '💻' },
-    { id: 'uiux', label: 'UI/UX', emoji: '🎨' }
+    { id: 'uiux', label: 'UI/UX and gen Art', emoji: '🎨' },
   ];
 
   const filteredProjects = selectedCategory === 'all' 
