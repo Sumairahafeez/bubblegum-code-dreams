@@ -150,6 +150,26 @@ const Projects = () => {
       codeUrl: ""
     },
     {
+      title: "Maths Master UI",
+      description: "UI art for a math-based game, featuring vibrant colors and engaging animations. A casual game with a focus on math recognition and hierarchy.",
+      tech: ["Freepik", "Adobe Illustrator", "AI"],
+      image: "🛍️",
+      gradient: "from-hot-pink to-aqua-blue dark:from-pink-500 dark:to-blue-500",
+      category: "uiux",
+      demoUrl: "https://www.behance.net/gallery/230024805/Maths-Master-Game-UI",
+      codeUrl: ""
+    },
+    {
+      title: "Yanch-e-Shilock UI",
+      description: "UI art for a math-based game, featuring vibrant colors and engaging animations. A casual game with a focus on math recognition and hierarchy.",
+      tech: ["Freepik", "Adobe Illustrator", "AI"],
+      image: "🛍️",
+      gradient: "from-hot-pink to-aqua-blue dark:from-pink-500 dark:to-blue-500",
+      category: "uiux",
+      demoUrl: "https://www.behance.net/gallery/230193097/Fantasy-Game",
+      codeUrl: ""
+    },
+    {
       title: "Tower Defense Game UI",
       description: "A visually stunning and immersive user interface for a tower defense game, featuring unique character designs and engaging animations.",
       tech: ["Figma", "Adobe XD", "Unity"],
