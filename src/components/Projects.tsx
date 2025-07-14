@@ -10,7 +10,7 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "AI-Powered Student Mental Health Predictor",
+      title: "ZenGauge - AI students Mental Health predictor",
       description: "A machine learning model that predicts student mental health issues based on various factors such as academic performance, social interactions, and personal well-being.",
       tech: ["streamlit", "scikit-learn", "Python", "GeminiPI"],
       image: "🎨",
@@ -20,7 +20,7 @@ const Projects = () => {
       codeUrl: "https://github.com/Sumairahafeez/mental-health-chatbot"
     },
     {
-      title: "Books Recommendation System",
+      title: "PagePick - Books Recommendation System",
       description: "A machine learning model that recommends books based on user preferences and reading history.",
       tech: ["streamlit", "scikit-learn", "Python", "GeminiPI"],
       image: "📚",
@@ -28,6 +28,36 @@ const Projects = () => {
       category: "ai",
       demoUrl: "https://github.com/Sumairahafeez/Books_Recommendation",
       codeUrl: "https://github.com/Sumairahafeez/Books_Recommendation"
+    },
+    {
+      title: " FileCRYPT",
+      description: "A secure file sharing system with end-to-end encryption and user authentication. Built with React and Flask.",
+      tech: ["React", "Flask", "VirusAPI", "RedisDB"],
+      image: "🔒",
+      gradient: "from-lemon-yellow to-bubble-pink dark:from-yellow-500 dark:to-purple-500",
+      category: "frontend",
+      demoUrl: "https://cyber-file-share.vercel.app/",
+      codeUrl: "https://github.com/Sumairahafeez/secure_file"
+    },
+    {
+      title: "Solitare Royale",
+      description: "A classic solitaire card game implemented with React.",
+      tech: ["React", "tailwind-CSS","JavaScript","Material UI"],
+      image: "🃏",
+      gradient: "from-lemon-yellow to-bubble-pink dark:from-yellow-500 dark:to-purple-500",
+      category: "frontend",
+      demoUrl: "https://sumairahafeez.github.io/solitare/",
+      codeUrl: "https://github.com/Sumairahafeez/solitare"
+    },
+     {
+      title: "Path Pilot",
+      description: "A pathfinding visualizer built with pyqt.",
+      tech: ["Python", "PyQt", "Algorithms"],
+      image: "🗺️",
+      gradient: "from-lemon-yellow to-bubble-pink dark:from-yellow-500 dark:to-purple-500",
+      category: "frontend",
+      demoUrl: "https://www.linkedin.com/posts/sumaira-hafeez-9974a6290_swayaway-tourism-pythondevelopment-activity-7276958190917832704-CxGs?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEaNSAMBpaPOfu_E9IYsdq5Y42m8_S6tdCE",
+      codeUrl: "https://github.com/Sumairahafeez/Tourism-guide"
     },
     {
       title: "CosmicDB",
@@ -49,28 +79,19 @@ const Projects = () => {
       demoUrl: "https://www.youtube.com/watch?v=jR5uCWMecQM",
       codeUrl: "https://github.com/Sumairahafeez/SpaceO"
     },
-    {
-      title: "Cyber File Sharing System",
-      description: "A secure file sharing system with end-to-end encryption and user authentication. Built with React and Flask.",
-      tech: ["React", "Flask", "VirusAPI", "RedisDB"],
-      image: "🔒",
+    
+     {
+      title: "M - Bot",
+      description: "A comprehensive mobile chatbot using react native.",
+      tech: ["React-native", "AI","mobile app"],
+      image: "🛩️",
       gradient: "from-lemon-yellow to-bubble-pink dark:from-yellow-500 dark:to-purple-500",
-      category: "frontend",
-      demoUrl: "https://cyber-file-share.vercel.app/",
-      codeUrl: "https://github.com/Sumairahafeez/secure_file"
+      category: "AI/ML",
+      demoUrl: "https://www.youtube.com/watch?v=9gCBCDd_ics",
+      codeUrl: "https://github.com/Sumairahafeez/Airforce_management_System"
     },
     {
-      title: "Solitare Game",
-      description: "A classic solitaire card game implemented with React.",
-      tech: ["React", "tailwind-CSS","JavaScript","Material UI"],
-      image: "🃏",
-      gradient: "from-lemon-yellow to-bubble-pink dark:from-yellow-500 dark:to-purple-500",
-      category: "frontend",
-      demoUrl: "https://sumairahafeez.github.io/solitare/",
-      codeUrl: "https://github.com/Sumairahafeez/solitare"
-    },
-    {
-      title: "Air Force Management System",
+      title: "MissionCtrl",
       description: "A comprehensive management system for air force operations, including personnel management, mission planning, and logistics.",
       tech: ["Winform", "C#","MSSQL"],
       image: "🛩️",
@@ -92,6 +113,16 @@ const Projects = () => {
     {
       title: "Mortgage repayment calculator",
       description: "A visually appealing and interactive mortgage repayment calculator web application.",
+      tech: ["React", "Tailwind CSS", "Figma","Frontend Mentor"],
+      image: "🏠",
+      gradient: "from-lemon-yellow to-bubble-pink dark:from-yellow-500 dark:to-purple-500",
+      category: "frontend",
+      demoUrl: "https://www.frontendmentor.io/solutions/mortgage-repayment-calculator-using-react-and-tailwind-css-8b1f2c3d4e",
+      codeUrl: "https://github.com/Sumairahafeez/Mortgage-Repayment-Calculator"
+    },
+    {
+      title: "Xpense Tracker",
+      description: "A visually appealing and interactive expense tracker web application.",
       tech: ["React", "Tailwind CSS", "Figma","Frontend Mentor"],
       image: "🏠",
       gradient: "from-lemon-yellow to-bubble-pink dark:from-yellow-500 dark:to-purple-500",
@@ -140,7 +171,7 @@ const Projects = () => {
       codeUrl: "https://github.com/Sumairahafeez/sentiment-bubble-bot"
     },
     {
-      title: "Rule based AI Chatbot",
+      title: "M-bot",
       description: "A rule-based AI chatbot for providing instant responses to user queries and assisting with common tasks.",
       tech: ["react-native", "Ollama", "expo", "sqlite"],
       image: "💖",
