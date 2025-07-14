@@ -38,16 +38,16 @@ const Hero = () => {
         </div>
 
         {/* Name and Title */}
-        <h1 className="font-bubblegum text-6xl md:text-8xl font-bold mb-4 bubble-text-gradient animate-pulse-glow">
+        <h1 className="font-poppins text-6xl md:text-8xl font-bold mb-4 bubble-text-gradient animate-pulse-glow">
           Sumaira Hafeez
         </h1>
         
-        <div className="font-comic text-2xl md:text-3xl text-black dark:text-white mb-6 typewriter">
+        <div className="font-inter text-2xl md:text-3xl text-black dark:text-white mb-6 typewriter">
           Frontend Developer & AI/ML Engineer
         </div>
         
-        <p className="font-comic text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-          ✨ Crafting <span className="text-bubble-pink dark:text-purple-400 font-bold">Beautiful Interfaces</span> with <span className="text-aqua-blue dark:text-blue-400 font-bold">Intelligent Solutions</span> ✨
+        <p className="font-inter text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+          Crafting <span className="text-bubble-pink dark:text-purple-400 font-bold">Beautiful Interfaces</span> with <span className="text-aqua-blue dark:text-blue-400 font-bold">Intelligent Solutions</span>
           <br />
           <span className="text-sm">Powered by coffee, creativity, and a love for pixel-perfect design!</span>
         </p>
@@ -56,7 +56,7 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
           <Button 
             onClick={scrollToProjects}
-            className="bounce-button bg-bubble-pink hover:bg-hot-pink dark:bg-purple-600 dark:hover:bg-purple-700 text-white font-comic text-lg px-8 py-4 rounded-full border-4 border-black dark:border-white shadow-lg"
+            className="bounce-button bg-bubble-pink hover:bg-hot-pink dark:bg-purple-600 dark:hover:bg-purple-700 text-white font-inter text-lg px-8 py-4 rounded-full border-4 border-black dark:border-white shadow-lg"
           >
              Explore My Work
           </Button>
@@ -64,9 +64,9 @@ const Hero = () => {
           <Button 
             variant="outline"
             onClick={() => window.open(resume, '_blank')}
-            className="bounce-button border-4 border-aqua-blue dark:border-blue-400 text-aqua-blue dark:text-blue-400 hover:bg-aqua-blue hover:text-black dark:hover:bg-blue-400 dark:hover:text-black font-comic text-lg px-8 py-4 rounded-full shadow-lg"
+            className="bounce-button border-4 border-aqua-blue dark:border-blue-400 text-aqua-blue dark:text-blue-400 hover:bg-aqua-blue hover:text-black dark:hover:bg-blue-400 dark:hover:text-black font-inter text-lg px-8 py-4 rounded-full shadow-lg"
           >
-            💌 Download Resume
+            Download Resume
           </Button>
         </div>
 

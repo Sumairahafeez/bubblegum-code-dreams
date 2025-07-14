@@ -45,8 +45,8 @@ const Experience = () => {
     <section id="experience" className="py-20 bg-gradient-to-br from-aqua-blue/5 via-white to-bubble-pink/5 dark:from-gray-900 dark:via-gray-800 dark:to-purple-900/20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="font-bubblegum text-5xl md:text-6xl font-bold bubble-text-gradient mb-6">
-            My Journey! 🚀
+          <h2 className="font-poppins text-5xl md:text-6xl font-bold bubble-text-gradient mb-6">
+            My Journey
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-bubble-pink to-aqua-blue mx-auto rounded-full"></div>
         </div>
@@ -67,37 +67,37 @@ const Experience = () => {
                 </div>
                 
                 <div className="flex-grow">
-                  <h3 className="font-comic text-2xl font-bold text-bubble-pink dark:text-purple-300 mb-2">
+                  <h3 className="font-poppins text-2xl font-bold text-bubble-pink dark:text-purple-300 mb-2">
                     {exp.title}
                   </h3>
                   <div className="flex flex-wrap gap-4 mb-4">
                     <div className="flex items-center text-gray-600 dark:text-gray-300">
                       <Briefcase className="w-4 h-4 mr-2 text-aqua-blue" />
-                      <span className="font-comic font-semibold">{exp.company}</span>
+                      <span className="font-inter font-semibold">{exp.company}</span>
                     </div>
                     <div className="flex items-center text-gray-600 dark:text-gray-300">
                       <MapPin className="w-4 h-4 mr-2 text-hot-pink" />
-                      <span className="font-comic">{exp.location}</span>
+                      <span className="font-inter">{exp.location}</span>
                     </div>
                     <div className="flex items-center text-gray-600 dark:text-gray-300">
                       <Calendar className="w-4 h-4 mr-2 text-lemon-yellow" />
-                      <span className="font-comic">{exp.period}</span>
+                      <span className="font-inter">{exp.period}</span>
                     </div>
                   </div>
                   
-                  <p className="font-comic text-gray-700 dark:text-gray-200 mb-4 leading-relaxed">
+                  <p className="font-inter text-gray-700 dark:text-gray-200 mb-4 leading-relaxed">
                     {exp.description}
                   </p>
                   
                   <div className="space-y-2">
-                    <h4 className="font-comic font-bold text-hot-pink dark:text-pink-300 mb-2">
+                    <h4 className="font-inter font-bold text-hot-pink dark:text-pink-300 mb-2">
                       Key Achievements:
                     </h4>
                     <ul className="space-y-1">
                       {exp.achievements.map((achievement, i) => (
                         <li key={i} className="flex items-start">
-                          <span className="text-bubble-pink mr-2">✨</span>
-                          <span className="font-comic text-gray-700 dark:text-gray-200">
+                          <span className="text-bubble-pink mr-2">•</span>
+                          <span className="font-inter text-gray-700 dark:text-gray-200">
                             {achievement}
                           </span>
                         </li>

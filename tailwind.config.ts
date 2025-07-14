@@ -130,8 +130,8 @@ export default {
 				'blink': 'blink 1s infinite'
 			},
 			fontFamily: {
-				'bubblegum': ['"Bubblegum Sans"', 'cursive'],
-				'comic': ['"Comic Neue"', 'cursive'],
+				'inter': ['Inter', 'sans-serif'],
+				'poppins': ['Poppins', 'sans-serif'],
 			}
 		}
 	},

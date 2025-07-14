@@ -297,10 +297,10 @@ const Projects = () => {
   ];
 
   const categories = [
-    { id: 'all', label: 'All Projects', emoji: '✨' },
-    { id: 'ai', label: 'AI/ML', emoji: '🤖' },
-    { id: 'frontend', label: 'Frontend', emoji: '💻' },
-    { id: 'uiux', label: 'UI/UX and gen Art', emoji: '🎨' },
+    { id: 'all', label: 'All Projects' },
+    { id: 'ai', label: 'AI/ML' },
+    { id: 'frontend', label: 'Frontend' },
+    { id: 'uiux', label: 'UI/UX & Design' },
   ];
 
   const filteredProjects = selectedCategory === 'all' 
@@ -328,11 +328,11 @@ const Projects = () => {
     <section id="projects" className="py-20 bg-gradient-to-br from-aqua-blue/10 via-white to-lemon-yellow/10 dark:from-blue-900/20 dark:via-gray-900 dark:to-yellow-900/20 polka-dots-subtle">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="font-bubblegum text-5xl md:text-6xl font-bold bubble-text-gradient mb-6">
-            My Projects! ✨
+          <h2 className="font-poppins text-5xl md:text-6xl font-bold bubble-text-gradient mb-6">
+            My Projects
           </h2>
-          <p className="font-comic text-xl text-gray-700 dark:text-gray-300">
-            Here's some of the fun stuff I've been working on! 🚀
+          <p className="font-inter text-xl text-gray-700 dark:text-gray-300">
+            Here's some of the work I've been creating
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-aqua-blue to-bubble-pink dark:from-blue-400 dark:to-purple-400 mx-auto rounded-full mt-4"></div>
         </div>
@@ -345,9 +345,8 @@ const Projects = () => {
                 <TabsTrigger
                   key={category.id}
                   value={category.id}
-                  className="font-comic font-bold text-sm rounded-full data-[state=active]:bg-bubble-pink dark:data-[state=active]:bg-purple-600 data-[state=active]:text-white data-[state=active]:shadow-lg transition-all duration-300"
+                  className="font-inter font-bold text-sm rounded-full data-[state=active]:bg-bubble-pink dark:data-[state=active]:bg-purple-600 data-[state=active]:text-white data-[state=active]:shadow-lg transition-all duration-300"
                 >
-                  <span className="mr-1">{category.emoji}</span>
                   {category.label}
                 </TabsTrigger>
               ))}
@@ -359,19 +358,19 @@ const Projects = () => {
         <div className="flex justify-center items-center gap-4 mb-8">
           <Button
             onClick={prevProjects}
-            className="bounce-button bg-bubble-pink hover:bg-hot-pink dark:bg-purple-600 dark:hover:bg-purple-700 text-white font-comic rounded-full p-3 border-2 border-black dark:border-white"
+            className="bounce-button bg-bubble-pink hover:bg-hot-pink dark:bg-purple-600 dark:hover:bg-purple-700 text-white font-inter rounded-full p-3 border-2 border-black dark:border-white"
             disabled={filteredProjects.length <= projectsPerPage}
           >
             <ChevronLeft className="w-5 h-5" />
           </Button>
           
-          <div className="font-comic text-gray-600 dark:text-gray-400">
+          <div className="font-inter text-gray-600 dark:text-gray-400">
             {Math.floor(currentIndex / projectsPerPage) + 1} of {totalPages}
           </div>
           
           <Button
             onClick={nextProjects}
-            className="bounce-button bg-bubble-pink hover:bg-hot-pink dark:bg-purple-600 dark:hover:bg-purple-700 text-white font-comic rounded-full p-3 border-2 border-black dark:border-white"
+            className="bounce-button bg-bubble-pink hover:bg-hot-pink dark:bg-purple-600 dark:hover:bg-purple-700 text-white font-inter rounded-full p-3 border-2 border-black dark:border-white"
             disabled={filteredProjects.length <= projectsPerPage}
           >
             <ChevronRight className="w-5 h-5" />
@@ -393,17 +392,17 @@ const Projects = () => {
                 <div className="text-4xl mb-2 animate-pulse-glow">
                   {project.image}
                 </div>
-                <div className="inline-block bg-white/20 backdrop-blur-sm rounded-full px-2 py-1 text-xs text-white font-comic font-bold">
+                <div className="inline-block bg-white/20 backdrop-blur-sm rounded-full px-2 py-1 text-xs text-white font-inter font-bold">
                   {categories.find(cat => cat.id === project.category)?.label || 'Other'}
                 </div>
               </div>
 
               {/* Project Content - Compact */}
               <div className="p-4">
-                <h3 className="font-bubblegum text-lg font-bold text-gray-800 dark:text-gray-200 mb-2">
+                <h3 className="font-poppins text-lg font-bold text-gray-800 dark:text-gray-200 mb-2">
                   {project.title}
                 </h3>
-                <p className="font-comic text-sm text-gray-600 dark:text-gray-400 mb-3 leading-relaxed line-clamp-3">
+                <p className="font-inter text-sm text-gray-600 dark:text-gray-400 mb-3 leading-relaxed line-clamp-3">
                   {project.description}
                 </p>
 
@@ -412,13 +411,13 @@ const Projects = () => {
                   {project.tech.slice(0, 3).map((tech) => (
                     <span 
                       key={tech}
-                      className="bg-gradient-to-r from-bubble-pink/20 to-aqua-blue/20 dark:from-purple-500/20 dark:to-blue-500/20 rounded-full px-2 py-1 text-xs font-comic font-bold text-gray-700 dark:text-gray-300 border border-dashed border-bubble-pink/50 dark:border-purple-400/50"
+                      className="bg-gradient-to-r from-bubble-pink/20 to-aqua-blue/20 dark:from-purple-500/20 dark:to-blue-500/20 rounded-full px-2 py-1 text-xs font-inter font-bold text-gray-700 dark:text-gray-300 border border-dashed border-bubble-pink/50 dark:border-purple-400/50"
                     >
                       {tech}
                     </span>
                   ))}
                   {project.tech.length > 3 && (
-                    <span className="text-xs font-comic text-gray-500 dark:text-gray-400">
+                    <span className="text-xs font-inter text-gray-500 dark:text-gray-400">
                       +{project.tech.length - 3} more
                     </span>
                   )}
@@ -429,7 +428,7 @@ const Projects = () => {
                   <Button 
                     onClick={() => window.open(project.demoUrl, '_blank')}
                     size="sm"
-                    className="bounce-button bg-bubble-pink hover:bg-hot-pink dark:bg-purple-600 dark:hover:bg-purple-700 text-white font-comic rounded-full border-2 border-black dark:border-white text-xs px-3 py-1"
+                    className="bounce-button bg-bubble-pink hover:bg-hot-pink dark:bg-purple-600 dark:hover:bg-purple-700 text-white font-inter rounded-full border-2 border-black dark:border-white text-xs px-3 py-1"
                   >
                     <ExternalLink className="w-3 h-3 mr-1" />
                     Demo
@@ -438,7 +437,7 @@ const Projects = () => {
                     onClick={() => window.open(project.codeUrl, '_blank')}
                     size="sm"
                     variant="outline"
-                    className="bounce-button border-2 border-aqua-blue dark:border-blue-400 text-aqua-blue dark:text-blue-400 hover:bg-aqua-blue hover:text-black dark:hover:bg-blue-400 dark:hover:text-black font-comic rounded-full text-xs px-3 py-1"
+                    className="bounce-button border-2 border-aqua-blue dark:border-blue-400 text-aqua-blue dark:text-blue-400 hover:bg-aqua-blue hover:text-black dark:hover:bg-blue-400 dark:hover:text-black font-inter rounded-full text-xs px-3 py-1"
                   >
                     <Github className="w-3 h-3 mr-1" />
                     Code
@@ -452,12 +451,12 @@ const Projects = () => {
         {/* Call to Action */}
         <div className="text-center mt-16">
           <div className="card-hover bg-white dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-8 shadow-xl inline-block">
-            <h3 className="font-comic text-2xl font-bold bubble-text-gradient mb-4">
-              Want to see more? 👀
+            <h3 className="font-poppins text-2xl font-bold bubble-text-gradient mb-4">
+              Want to see more?
             </h3>
-            <Button onClick={() => window.open('https://github.com/Sumairahafeez', '_blank')} className="bounce-button bg-gradient-to-r from-bubble-pink to-aqua-blue dark:from-purple-600 dark:to-blue-600 hover:from-hot-pink hover:to-neon-green dark:hover:from-purple-700 dark:hover:to-blue-700 text-white font-comic text-lg px-8 py-3 rounded-full border-4 border-black dark:border-white shadow-lg">
+            <Button onClick={() => window.open('https://github.com/Sumairahafeez', '_blank')} className="bounce-button bg-gradient-to-r from-bubble-pink to-aqua-blue dark:from-purple-600 dark:to-blue-600 hover:from-hot-pink hover:to-neon-green dark:hover:from-purple-700 dark:hover:to-blue-700 text-white font-inter text-lg px-8 py-3 rounded-full border-4 border-black dark:border-white shadow-lg">
               <Github className="w-5 h-5 mr-2" />
-              Check out my GitHub!
+              Check out my GitHub
             </Button>
           </div>
         </div>
