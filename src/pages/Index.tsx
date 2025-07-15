@@ -12,9 +12,9 @@ import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden anime-bg min-h-screen">
       <Navbar />
-      <div className="pt-16"> {/* Add padding to account for fixed navbar */}
+      <div className="pt-16">
         <section id="hero">
           <Hero />
         </section>
