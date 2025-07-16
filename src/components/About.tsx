@@ -1,129 +1,80 @@
-import { Code, Brain, Coffee, Heart, Star, Sparkles } from 'lucide-react';
-import animeAbout from '../assets/anime-about.png';
+
+import { Code, Brain, Coffee, Heart } from 'lucide-react';
 
 const About = () => {
   const skills = [
-    { icon: Code, name: 'Frontend Magic', color: 'text-primary' },
-    { icon: Brain, name: 'AI/ML Wizardry', color: 'text-secondary' },
-    { icon: Coffee, name: 'Coffee-Driven Development', color: 'text-accent' },
-    { icon: Heart, name: 'Pixel-Perfect Art', color: 'text-destructive' }
+    { icon: Code, name: 'Frontend Magic', color: 'text-bubble-pink dark:text-purple-400' },
+    { icon: Brain, name: 'AI/ML Wizardry', color: 'text-aqua-blue dark:text-blue-400' },
+    { icon: Coffee, name: 'Coffee-Driven Development', color: 'text-lemon-yellow dark:text-yellow-400' },
+    { icon: Heart, name: 'Pixel-Perfect Art', color: 'text-hot-pink dark:text-pink-400' }
   ];
 
   return (
-    <section id="about" className="py-20 anime-bg relative">
-      {/* Floating sakura petals */}
-      <div className="sakura-container">
-        {[...Array(8)].map((_, i) => (
-          <div
-            key={i}
-            className="sakura-petal"
-            style={{
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 10}s`,
-              animationDuration: `${8 + Math.random() * 4}s`
-            }}
-          />
-        ))}
-      </div>
-
-      <div className="container mx-auto px-6 relative z-10">
+    <section id="about" className="py-20 bg-gradient-to-r from-lemon-yellow/10 to-bubble-pink/10 dark:from-yellow-900/20 dark:to-purple-900/20">
+      <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-bold kawaii-text mb-6">
+          <h2 className="font-poppins text-5xl md:text-6xl font-bold bubble-text-gradient mb-6">
             About Me
           </h2>
-          <div className="flex justify-center gap-2 mb-4">
-            <Heart className="w-6 h-6 text-destructive animate-bounce-kawaii" />
-            <Star className="w-6 h-6 text-primary animate-pulse-glow" />
-            <Sparkles className="w-6 h-6 text-secondary animate-float" />
-          </div>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full animate-gradient-x"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-bubble-pink to-aqua-blue dark:from-purple-400 dark:to-blue-400 mx-auto rounded-full"></div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Bio Section with Anime Illustration */}
-          <div className="space-y-6 order-2 md:order-1">
-            <div className="kawaii-card p-8">
-              <h3 className="text-2xl font-bold text-primary mb-4 flex items-center gap-2">
-                <Heart className="w-6 h-6 text-destructive animate-pulse-glow" />
+          {/* Bio Section */}
+          <div className="space-y-6">
+            <div className="card-hover bg-white dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-8 shadow-xl border-4 border-dashed border-bubble-pink/30 dark:border-purple-400/30">
+              <h3 className="font-poppins text-2xl font-bold text-bubble-pink dark:text-purple-400 mb-4">
                 Hey there, I'm Sumaira!
               </h3>
-              <div className="text-muted-foreground leading-relaxed space-y-4">
+              <div className="font-inter text-gray-700 dark:text-gray-300 leading-relaxed space-y-4">
                 <p>
-                  I'm a passionate <span className="text-primary font-bold">frontend developer</span> and 
-                  <span className="text-secondary font-bold"> AI/ML engineer</span> who believes that technology 
+                  I'm a passionate <span className="text-bubble-pink dark:text-purple-400 font-bold">frontend developer</span> and 
+                  <span className="text-aqua-blue dark:text-blue-400 font-bold"> AI/ML engineer</span> who believes that technology 
                   should be both beautiful AND intelligent! 
                 </p>
                 <p>
-                  When I'm not crafting stunning interfaces or training AI models, you'll find me 
-                  experimenting with anime-inspired designs, creating digital art with generative models, 
-                  sipping bubble tea, and turning creative ideas into digital reality!
+                  When I'm not crafting frontend or training models, you'll find me 
+                  experimenting with new design trends, using generative images models to create digital art as hobbies, sipping bubble tea, and turning creative ideas 
+                  into digital reality!
                 </p>
-                <p className="text-destructive font-bold">
-                  Fun fact: I love crafting kawaii experiences that make users smile! 
+                <p className="text-hot-pink dark:text-pink-400 font-bold">
+                  Fun fact: I love crafting images with generative models that make users smile! 
                 </p>
-              </div>
-            </div>
-
-            {/* Tech Stack */}
-            <div className="kawaii-card p-8">
-              <h3 className="text-2xl font-bold text-center mb-8 kawaii-text flex items-center justify-center gap-2">
-                <Code className="w-6 h-6 text-primary" />
-                My Tech Toolbox
-              </h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                {['React', 'JavaScript', 'Winform', 'Python', 'Tailwind CSS', 'Node.js', 'Bootstrap', 'Adobe Illustrator', 'Adobe After Effects','Flask','scikit-learn','React Native','Expo', 'Express.js','GitHub','GitLab'].map((tech, index) => (
-                  <div 
-                    key={tech}
-                    className="anime-button text-sm py-2 px-3 text-center font-semibold rounded-full hover:scale-105 transition-all duration-300"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
-                    {tech}
-                  </div>
-                ))}
               </div>
             </div>
           </div>
 
-          {/* Anime Avatar & Skills */}
-          <div className="space-y-6 order-1 md:order-2">
-            {/* Anime Illustration */}
-            <div className="relative group">
-              <div className="kawaii-card p-8">
-                <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center relative">
-                  <img
-                    src={animeAbout}
-                    alt="Anime style illustration of Sumaira"
-                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
-                  />
-                  {/* Floating elements around image */}
-                  <div className="absolute -top-4 -right-4 animate-float">
-                    <div className="w-12 h-12 bg-primary/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-primary/30">
-                      <Code className="w-6 h-6 text-primary" />
-                    </div>
-                  </div>
-                  <div className="absolute -bottom-4 -left-4 animate-float-delayed">
-                    <div className="w-10 h-10 bg-secondary/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-secondary/30">
-                      <Heart className="w-5 h-5 text-secondary" />
-                    </div>
-                  </div>
+          {/* Skills Grid */}
+          <div className="grid grid-cols-2 gap-6">
+            {skills.map((skill, index) => (
+              <div 
+                key={skill.name}
+                className={`card-hover bg-white dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-6 text-center shadow-xl transform hover:rotate-3 transition-all duration-300 delay-${index * 100}`}
+              >
+                <div className="mb-4">
+                  <skill.icon className={`w-12 h-12 ${skill.color} mx-auto animate-bounce-slow`} />
                 </div>
+                <h4 className="font-inter font-bold text-gray-800 dark:text-gray-200">
+                  {skill.name}
+                </h4>
               </div>
-            </div>
+            ))}
+          </div>
+        </div>
 
-            {/* Skills Grid */}
-            <div className="grid grid-cols-2 gap-4">
-              {skills.map((skill, index) => (
+        {/* Tech Stack */}
+        <div className="mt-16">
+          <div className="card-hover bg-white dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-8 shadow-xl">
+            <h3 className="font-poppins text-2xl font-bold text-center mb-8 bubble-text-gradient">
+              My Tech Toolbox
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {['React', 'JavaScript', 'Winform', 'Python', 'Tailwind CSS', 'Node.js', 'Bootstrap', 'Adobe illustrator', 'Adobe Aftereffects','Flask','scikit-learn','react-native','expo', 'express js','github','gitlab'].map((tech, index) => (
                 <div 
-                  key={skill.name}
-                  className="kawaii-card p-6 text-center group hover:rotate-3 transition-all duration-300"
-                  style={{ animationDelay: `${index * 0.2}s` }}
+                  key={tech}
+                  className={`bounce-button bg-gradient-to-r from-bubble-pink/20 to-aqua-blue/20 dark:from-purple-500/20 dark:to-blue-500/20 rounded-full px-4 py-2 text-center font-inter font-bold text-gray-800 dark:text-gray-200 border-2 border-dashed border-bubble-pink/50 dark:border-purple-400/50 hover:border-solid`}
                 >
-                  <div className="mb-4">
-                    <skill.icon className={`w-12 h-12 ${skill.color} mx-auto animate-bounce-kawaii group-hover:scale-110 transition-transform`} />
-                  </div>
-                  <h4 className="font-semibold text-foreground text-sm">
-                    {skill.name}
-                  </h4>
+                  {tech}
                 </div>
               ))}
             </div>
