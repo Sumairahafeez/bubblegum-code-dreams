@@ -22,7 +22,7 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Bio Section */}
           <div className="space-y-6">
-            <div className="card-hover bg-white dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-8 shadow-xl border-4 border-dashed border-bubble-pink/30 dark:border-purple-400/30">
+            <div className="group card-hover bg-white dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-8 shadow-xl border-4 border-dashed border-bubble-pink/30 dark:border-purple-400/30 cursor-pointer">
               <h3 className="font-poppins text-2xl font-bold text-bubble-pink dark:text-purple-400 mb-4">
                 Hey there, I'm Sumaira!
               </h3>
@@ -32,12 +32,12 @@ const About = () => {
                   <span className="text-aqua-blue dark:text-blue-400 font-bold"> AI/ML engineer</span> who believes that technology 
                   should be both beautiful AND intelligent! 
                 </p>
-                <p>
+                <p className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   When I'm not crafting frontend or training models, you'll find me 
                   experimenting with new design trends, using generative images models to create digital art as hobbies, sipping bubble tea, and turning creative ideas 
                   into digital reality!
                 </p>
-                <p className="text-hot-pink dark:text-pink-400 font-bold">
+                <p className="text-hot-pink dark:text-pink-400 font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   Fun fact: I love crafting images with generative models that make users smile! 
                 </p>
               </div>

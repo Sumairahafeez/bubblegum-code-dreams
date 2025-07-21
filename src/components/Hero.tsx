@@ -102,7 +102,7 @@ const Hero = () => {
           </div>
           
           {/* Enhanced Description */}
-          <div className="mb-12 max-w-3xl mx-auto">
+          <div className="mb-12 max-w-3xl mx-auto group cursor-pointer">
             <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground leading-relaxed mb-4">
               Crafting{' '}
               <span className="font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
@@ -113,7 +113,7 @@ const Hero = () => {
                 Intelligent Solutions
               </span>
             </p>
-            <p className="text-sm sm:text-base text-muted-foreground/80">
+            <p className="text-sm sm:text-base text-muted-foreground/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               Powered by coffee, creativity, and a passion for pixel-perfect design
             </p>
           </div>

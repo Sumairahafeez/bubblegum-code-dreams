@@ -55,7 +55,7 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <div 
               key={index}
-              className={`card-hover bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border-4 border-dashed border-bubble-pink/30 dark:border-purple-400/30 mb-8 transform hover:scale-105 transition-all duration-300 ${
+              className={`group card-hover bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border-4 border-dashed border-bubble-pink/30 dark:border-purple-400/30 mb-8 transform hover:scale-105 transition-all duration-300 cursor-pointer ${
                 index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'
               }`}
             >
@@ -85,11 +85,11 @@ const Experience = () => {
                     </div>
                   </div>
                   
-                  <p className="font-inter text-gray-700 dark:text-gray-200 mb-4 leading-relaxed">
+                  <p className="font-inter text-gray-700 dark:text-gray-200 mb-4 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     {exp.description}
                   </p>
                   
-                  <div className="space-y-2">
+                  <div className="space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <h4 className="font-inter font-bold text-hot-pink dark:text-pink-300 mb-2">
                       Key Achievements:
                     </h4>
