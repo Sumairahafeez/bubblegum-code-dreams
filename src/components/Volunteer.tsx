@@ -1,18 +1,7 @@
 
-import { Heart, Calendar, MapPin, Users, ChevronDown, ChevronUp } from 'lucide-react';
-import { useState } from 'react';
+import { Heart, Calendar, MapPin, Users, OrigamiIcon } from 'lucide-react';
 
 const Volunteer = () => {
-  const [expandedCards, setExpandedCards] = useState<string[]>([]);
-
-  const toggleCard = (organization: string) => {
-    setExpandedCards(prev => 
-      prev.includes(organization) 
-        ? prev.filter(org => org !== organization)
-        : [...prev, organization]
-    );
-  };
-
   const experiences = [
     {
       organization: "Bayyinah TV",
@@ -89,110 +78,72 @@ const Volunteer = () => {
           <div className="w-20 h-1 bg-gradient-to-r from-hot-pink to-aqua-blue dark:from-pink-400 dark:to-blue-400 mx-auto rounded-full mt-3"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-          {experiences.map((exp, index) => {
-            const isExpanded = expandedCards.includes(exp.organization);
-            return (
-              <div 
-                key={exp.organization}
-                className="bg-white dark:bg-gray-800/90 backdrop-blur-sm rounded-xl p-4 shadow-lg transform hover:scale-[1.02] transition-all duration-300 border border-gray-200/50 dark:border-gray-700/50"
-              >
-                {/* Header */}
-                <div className="flex items-start gap-3 mb-3">
-                  <div className={`bg-gradient-to-r ${exp.color} rounded-lg p-1.5 flex-shrink-0`}>
-                    <Heart className="w-4 h-4 text-white" />
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <h3 className="font-bubblegum text-base font-bold text-gray-800 dark:text-gray-200 truncate">
-                      {exp.role}
-                    </h3>
-                    <p className="font-comic text-xs text-bubble-pink dark:text-purple-400 font-bold truncate">
-                      {exp.organization}
-                    </p>
-                  </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {experiences.map((exp, index) => (
+            <div 
+              key={exp.organization}
+              className={`group card-hover bg-white dark:bg-gray-800/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg transform hover:scale-105 transition-all duration-300 cursor-pointer border border-gray-200/50 dark:border-gray-700/50`}
+            >
+              {/* Header */}
+              <div className="flex items-start gap-3 mb-4">
+                <div className={`bg-gradient-to-r ${exp.color} rounded-xl p-2 flex-shrink-0`}>
+                  <Heart className="w-5 h-5 text-white" />
                 </div>
-
-                {/* Basic Details - Always visible */}
-                <div className="space-y-1 mb-3 text-xs text-gray-600 dark:text-gray-400 font-comic">
-                  <div className="flex items-center gap-1">
-                    <Calendar className="w-3 h-3" />
-                    <span className="truncate">{exp.duration}</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <MapPin className="w-3 h-3" />
-                    <span className="truncate">{exp.location}</span>
-                  </div>
+                <div className="min-w-0 flex-1">
+                  <h3 className="font-bubblegum text-lg font-bold text-gray-800 dark:text-gray-200 truncate">
+                    {exp.role}
+                  </h3>
+                  <p className="font-comic text-sm text-bubble-pink dark:text-purple-400 font-bold truncate">
+                    {exp.organization}
+                  </p>
                 </div>
-
-                {/* Quick Skills Preview - Always visible */}
-                <div className="flex flex-wrap gap-1 mb-3">
-                  {exp.skills.slice(0, 2).map((skill) => (
-                    <span 
-                      key={skill}
-                      className="bg-gradient-to-r from-lemon-yellow/20 to-bubble-pink/20 dark:from-yellow-500/20 dark:to-purple-500/20 rounded-full px-2 py-1 text-xs font-comic font-bold text-gray-700 dark:text-gray-300 border border-dashed border-bubble-pink/50 dark:border-purple-400/50"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                  {exp.skills.length > 2 && (
-                    <span className="text-xs text-gray-500 dark:text-gray-400 font-comic px-2 py-1">
-                      +{exp.skills.length - 2}
-                    </span>
-                  )}
-                </div>
-
-                {/* Expandable Content */}
-                {isExpanded && (
-                  <div className="space-y-3 animate-fade-in">
-                    {/* Description */}
-                    <p className="font-comic text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
-                      {exp.description}
-                    </p>
-
-                    {/* Impact */}
-                    <div className="bg-gradient-to-r from-bubble-pink/20 to-aqua-blue/20 dark:from-purple-500/20 dark:to-blue-500/20 rounded-lg px-3 py-2 border border-dashed border-bubble-pink/50 dark:border-purple-400/50">
-                      <div className="flex items-center gap-2">
-                        <Users className="w-3 h-3 text-bubble-pink dark:text-purple-400" />
-                        <span className="font-comic font-bold text-gray-700 dark:text-gray-300 text-xs">
-                          {exp.impact}
-                        </span>
-                      </div>
-                    </div>
-
-                    {/* All Skills */}
-                    <div className="flex flex-wrap gap-1">
-                      {exp.skills.map((skill) => (
-                        <span 
-                          key={skill}
-                          className="bg-gradient-to-r from-lemon-yellow/20 to-bubble-pink/20 dark:from-yellow-500/20 dark:to-purple-500/20 rounded-full px-2 py-1 text-xs font-comic font-bold text-gray-700 dark:text-gray-300 border border-dashed border-bubble-pink/50 dark:border-purple-400/50"
-                        >
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {/* Show More/Less Button */}
-                <button
-                  onClick={() => toggleCard(exp.organization)}
-                  className="w-full mt-3 bg-gradient-to-r from-bubble-pink/10 to-hot-pink/10 dark:from-purple-500/10 dark:to-pink-500/10 hover:from-bubble-pink/20 hover:to-hot-pink/20 dark:hover:from-purple-500/20 dark:hover:to-pink-500/20 text-bubble-pink dark:text-purple-400 font-comic text-xs px-3 py-2 rounded-lg border border-bubble-pink/30 dark:border-purple-400/30 transition-all duration-300 flex items-center justify-center gap-1"
-                >
-                  {isExpanded ? (
-                    <>
-                      Show Less
-                      <ChevronUp className="w-3 h-3" />
-                    </>
-                  ) : (
-                    <>
-                      Show More
-                      <ChevronDown className="w-3 h-3" />
-                    </>
-                  )}
-                </button>
               </div>
-            );
-          })}
+
+              {/* Details */}
+              <div className="space-y-2 mb-4 text-xs text-gray-600 dark:text-gray-400 font-comic">
+                <div className="flex items-center gap-1">
+                  <Calendar className="w-3 h-3" />
+                  <span className="truncate">{exp.duration}</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <MapPin className="w-3 h-3" />
+                  <span className="truncate">{exp.location}</span>
+                </div>
+              </div>
+
+              {/* Description - Hidden by default, shown on hover */}
+              <p className="font-comic text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 line-clamp-3">
+                {exp.description}
+              </p>
+
+              {/* Impact */}
+              <div className="mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="flex items-center gap-2 bg-gradient-to-r from-bubble-pink/20 to-aqua-blue/20 dark:from-purple-500/20 dark:to-blue-500/20 rounded-lg px-3 py-1.5 border border-dashed border-bubble-pink/50 dark:border-purple-400/50">
+                  <Users className="w-3 h-3 text-bubble-pink dark:text-purple-400" />
+                  <span className="font-comic font-bold text-gray-700 dark:text-gray-300 text-xs truncate">
+                    {exp.impact}
+                  </span>
+                </div>
+              </div>
+
+              {/* Skills */}
+              <div className="flex flex-wrap gap-1">
+                {exp.skills.slice(0, 3).map((skill) => (
+                  <span 
+                    key={skill}
+                    className="bg-gradient-to-r from-lemon-yellow/20 to-bubble-pink/20 dark:from-yellow-500/20 dark:to-purple-500/20 rounded-full px-2 py-1 text-xs font-comic font-bold text-gray-700 dark:text-gray-300 border border-dashed border-bubble-pink/50 dark:border-purple-400/50"
+                  >
+                    {skill}
+                  </span>
+                ))}
+                {exp.skills.length > 3 && (
+                  <span className="text-xs text-gray-500 dark:text-gray-400 font-comic px-2 py-1">
+                    +{exp.skills.length - 3}
+                  </span>
+                )}
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* Call to Action */}
