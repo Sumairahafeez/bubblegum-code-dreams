@@ -1,7 +1,18 @@
 
-import { Heart, Calendar, MapPin, Users, OrigamiIcon } from 'lucide-react';
+import { Heart, Calendar, MapPin, Users, ChevronDown, ChevronUp } from 'lucide-react';
+import { useState } from 'react';
 
 const Volunteer = () => {
+  const [expandedCards, setExpandedCards] = useState<string[]>([]);
+
+  const toggleCard = (organization: string) => {
+    setExpandedCards(prev => 
+      prev.includes(organization) 
+        ? prev.filter(org => org !== organization)
+        : [...prev, organization]
+    );
+  };
+
   const experiences = [
     {
       organization: "Bayyinah TV",
@@ -68,97 +79,135 @@ const Volunteer = () => {
   return (
     <section id="volunteer" className="py-20 bg-gradient-to-br from-hot-pink/10 via-white to-aqua-blue/10 dark:from-pink-900/20 dark:via-gray-900 dark:to-blue-900/20 polka-dots-subtle">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="font-bubblegum text-5xl md:text-6xl font-bold bubble-text-gradient mb-6">
+        <div className="text-center mb-12">
+          <h2 className="font-bubblegum text-4xl md:text-5xl font-bold bubble-text-gradient mb-4">
             Volunteer Experience! 💝
           </h2>
-          <p className="font-comic text-xl text-gray-700 dark:text-gray-300">
+          <p className="font-comic text-lg text-gray-700 dark:text-gray-300 opacity-0 hover:opacity-100 transition-opacity duration-300">
             Giving back to the community through tech! 🌟
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-hot-pink to-aqua-blue dark:from-pink-400 dark:to-blue-400 mx-auto rounded-full mt-4"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-hot-pink to-aqua-blue dark:from-pink-400 dark:to-blue-400 mx-auto rounded-full mt-3"></div>
         </div>
 
-        <div className="space-y-8">
-          {experiences.map((exp, index) => (
-            <div 
-              key={exp.organization}
-              className={`card-hover bg-white dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-8 shadow-xl transform hover:scale-102 transition-all duration-500 delay-${index * 100}`}
-            >
-              <div className="flex flex-col lg:flex-row gap-6">
-                {/* Icon and Organization */}
-                <div className="flex-shrink-0">
-                  <div className={`bg-gradient-to-r ${exp.color} rounded-full p-4 w-16 h-16 flex items-center justify-center`}>
-                    <Heart className="w-8 h-8 text-white animate-pulse-glow" />
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+          {experiences.map((exp, index) => {
+            const isExpanded = expandedCards.includes(exp.organization);
+            return (
+              <div 
+                key={exp.organization}
+                className="bg-white dark:bg-gray-800/90 backdrop-blur-sm rounded-xl p-4 shadow-lg transform hover:scale-[1.02] transition-all duration-300 border border-gray-200/50 dark:border-gray-700/50"
+              >
+                {/* Header */}
+                <div className="flex items-start gap-3 mb-3">
+                  <div className={`bg-gradient-to-r ${exp.color} rounded-lg p-1.5 flex-shrink-0`}>
+                    <Heart className="w-4 h-4 text-white" />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <h3 className="font-bubblegum text-base font-bold text-gray-800 dark:text-gray-200 truncate">
+                      {exp.role}
+                    </h3>
+                    <p className="font-comic text-xs text-bubble-pink dark:text-purple-400 font-bold truncate">
+                      {exp.organization}
+                    </p>
                   </div>
                 </div>
 
-                {/* Content */}
-                <div className="flex-grow">
-                  <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
-                    <div>
-                      <h3 className="font-bubblegum text-2xl font-bold text-gray-800 dark:text-gray-200 mb-1">
-                        {exp.role}
-                      </h3>
-                      <p className="font-comic text-lg text-bubble-pink dark:text-purple-400 font-bold mb-2">
-                        {exp.organization}
-                      </p>
-                    </div>
-                    <div className="flex flex-col md:items-end text-sm text-gray-600 dark:text-gray-400 font-comic">
-                      <div className="flex items-center gap-1 mb-1">
-                        <Calendar className="w-4 h-4" />
-                        {exp.duration}
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <MapPin className="w-4 h-4" />
-                        {exp.location}
-                      </div>
-                    </div>
+                {/* Basic Details - Always visible */}
+                <div className="space-y-1 mb-3 text-xs text-gray-600 dark:text-gray-400 font-comic">
+                  <div className="flex items-center gap-1">
+                    <Calendar className="w-3 h-3" />
+                    <span className="truncate">{exp.duration}</span>
                   </div>
-
-                  <p className="font-comic text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                    {exp.description}
-                  </p>
-
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="flex items-center gap-2 bg-gradient-to-r from-bubble-pink/20 to-aqua-blue/20 dark:from-purple-500/20 dark:to-blue-500/20 rounded-full px-4 py-2 border border-dashed border-bubble-pink/50 dark:border-purple-400/50">
-                      <Users className="w-4 h-4 text-bubble-pink dark:text-purple-400" />
-                      <span className="font-comic font-bold text-gray-700 dark:text-gray-300 text-sm">
-                        {exp.impact}
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-wrap gap-2">
-                    {exp.skills.map((skill) => (
-                      <span 
-                        key={skill}
-                        className="bg-gradient-to-r from-lemon-yellow/20 to-bubble-pink/20 dark:from-yellow-500/20 dark:to-purple-500/20 rounded-full px-3 py-1 text-xs font-comic font-bold text-gray-700 dark:text-gray-300 border border-dashed border-bubble-pink/50 dark:border-purple-400/50"
-                      >
-                        {skill}
-                      </span>
-                    ))}
+                  <div className="flex items-center gap-1">
+                    <MapPin className="w-3 h-3" />
+                    <span className="truncate">{exp.location}</span>
                   </div>
                 </div>
+
+                {/* Quick Skills Preview - Always visible */}
+                <div className="flex flex-wrap gap-1 mb-3">
+                  {exp.skills.slice(0, 2).map((skill) => (
+                    <span 
+                      key={skill}
+                      className="bg-gradient-to-r from-lemon-yellow/20 to-bubble-pink/20 dark:from-yellow-500/20 dark:to-purple-500/20 rounded-full px-2 py-1 text-xs font-comic font-bold text-gray-700 dark:text-gray-300 border border-dashed border-bubble-pink/50 dark:border-purple-400/50"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                  {exp.skills.length > 2 && (
+                    <span className="text-xs text-gray-500 dark:text-gray-400 font-comic px-2 py-1">
+                      +{exp.skills.length - 2}
+                    </span>
+                  )}
+                </div>
+
+                {/* Expandable Content */}
+                {isExpanded && (
+                  <div className="space-y-3 animate-fade-in">
+                    {/* Description */}
+                    <p className="font-comic text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                      {exp.description}
+                    </p>
+
+                    {/* Impact */}
+                    <div className="bg-gradient-to-r from-bubble-pink/20 to-aqua-blue/20 dark:from-purple-500/20 dark:to-blue-500/20 rounded-lg px-3 py-2 border border-dashed border-bubble-pink/50 dark:border-purple-400/50">
+                      <div className="flex items-center gap-2">
+                        <Users className="w-3 h-3 text-bubble-pink dark:text-purple-400" />
+                        <span className="font-comic font-bold text-gray-700 dark:text-gray-300 text-xs">
+                          {exp.impact}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* All Skills */}
+                    <div className="flex flex-wrap gap-1">
+                      {exp.skills.map((skill) => (
+                        <span 
+                          key={skill}
+                          className="bg-gradient-to-r from-lemon-yellow/20 to-bubble-pink/20 dark:from-yellow-500/20 dark:to-purple-500/20 rounded-full px-2 py-1 text-xs font-comic font-bold text-gray-700 dark:text-gray-300 border border-dashed border-bubble-pink/50 dark:border-purple-400/50"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Show More/Less Button */}
+                <button
+                  onClick={() => toggleCard(exp.organization)}
+                  className="w-full mt-3 bg-gradient-to-r from-bubble-pink/10 to-hot-pink/10 dark:from-purple-500/10 dark:to-pink-500/10 hover:from-bubble-pink/20 hover:to-hot-pink/20 dark:hover:from-purple-500/20 dark:hover:to-pink-500/20 text-bubble-pink dark:text-purple-400 font-comic text-xs px-3 py-2 rounded-lg border border-bubble-pink/30 dark:border-purple-400/30 transition-all duration-300 flex items-center justify-center gap-1"
+                >
+                  {isExpanded ? (
+                    <>
+                      Show Less
+                      <ChevronUp className="w-3 h-3" />
+                    </>
+                  ) : (
+                    <>
+                      Show More
+                      <ChevronDown className="w-3 h-3" />
+                    </>
+                  )}
+                </button>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16">
-          <div className="card-hover bg-white dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl p-8 shadow-xl inline-block">
-            <h3 className="font-comic text-2xl font-bold bubble-text-gradient mb-4">
+        <div className="text-center mt-12">
+          <div className="group card-hover bg-white dark:bg-gray-800/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg inline-block cursor-pointer">
+            <h3 className="font-comic text-xl font-bold bubble-text-gradient mb-3">
               Want to volunteer together? 🤝
             </h3>
-            <p className="font-comic text-gray-700 dark:text-gray-300 mb-6">
+            <p className="font-comic text-gray-700 dark:text-gray-300 mb-4 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               I'm always looking for new opportunities to give back to the tech community!
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bounce-button bg-gradient-to-r from-bubble-pink to-hot-pink dark:from-purple-600 dark:to-pink-600 hover:from-hot-pink hover:to-bubble-pink dark:hover:from-purple-700 dark:hover:to-pink-700 text-white font-comic text-lg px-6 py-3 rounded-full border-4 border-black dark:border-white shadow-lg" onClick={() => window.open('https://www.linkedin.com/in/sumaira-hafeez-9974a6290/', '_blank')}>
-                <Heart className="w-5 h-5 mr-2 inline" />
-                Let's Collaborate!
-              </button>
-            </div>
+            <button className="bounce-button bg-gradient-to-r from-bubble-pink to-hot-pink dark:from-purple-600 dark:to-pink-600 hover:from-hot-pink hover:to-bubble-pink dark:hover:from-purple-700 dark:hover:to-pink-700 text-white font-comic text-sm px-5 py-2.5 rounded-full border-2 border-black/20 dark:border-white/20 shadow-md transition-all duration-300" onClick={() => window.open('https://www.linkedin.com/in/sumaira-hafeez-9974a6290/', '_blank')}>
+              <Heart className="w-4 h-4 mr-2 inline" />
+              Let's Collaborate!
+            </button>
           </div>
         </div>
       </div>
