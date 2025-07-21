@@ -2,16 +2,67 @@
 import { Award, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import AI from '../assets/AI.jpg';
+import explorer from '../assets/explorer.png';
+import python from '../assets/into to python.png';
+import embeddings from '../assets/Embeddings.png';
+import systems from '../assets/systems.png';
+import llms from '../assets/LLM ops.png';
+import prompt from '../assets/prompt.png';
+import huggingface from '../assets/hugging face.png';
 const Certifications = () => {
   const certifications = [
     {
       title: "AI Engineer Explorer Certificate",
       issuer: "Jet Academy Udemy",
       date: "2025",
-      image: "../assets/explorer.png",
+      image: explorer,
       credentialUrl: "#",
       skills: ["Matplotlib", "AI/ML", "Python"]
     },
+    {
+      title: "Developing AI systems with OpenAI",
+      issuer: "Datacamp",
+      date: "2025",
+      image: systems,
+      credentialUrl: "#",
+      skills: ["Open AI Api", "error handling", "best practices"]
+    },
+    {
+      title: "OpenAI Embeddings",
+      issuer: "Datacamp",
+      date: "2025",
+      image: embeddings,
+      credentialUrl: "#",
+      skills: ["Vector DB", "Chroma DB", "OpenAI Embeddings", "Pinecone"]
+    },
+    {
+      title: "LLM Ops",
+      issuer: "Datacamp",
+      date: "2025",
+      image: llms,
+      credentialUrl: "#",
+      skills: ["LLM", "RAG vs Fine Tuning", "Management", "Deployment"]
+    },
+    {
+      title: "Prompt Engineering",
+      issuer: "Datacamp",
+      date: "2025",
+      image: prompt,
+      credentialUrl: "#",
+      skills: ["OpenAI", "Gen AI applications", "prompting", "best practices"]
+    },
+    {
+      title: "Intro to Hugging Face",
+      issuer: "Datacamp",
+      date: "2025",
+      image: huggingface,
+      credentialUrl: "#",
+      skills: ["Transformers", "Natural Language Processing", "Fine-tuning", "Deployment"]
+    },
+
+
+
+    
     // {
     //   title: "AI Engineer Professional Certificate",
     //   issuer: "Jet Academy Udemy",
@@ -24,7 +75,7 @@ const Certifications = () => {
       title: "Intro to python",
       issuer: "DataCamp",
       date: "2024",
-      image: "../assets/into to python.PNG",
+      image: python,
       credentialUrl: "#",
       skills: ["MongoDB", "Database"]
     },

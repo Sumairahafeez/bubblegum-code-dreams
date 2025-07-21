@@ -4,14 +4,14 @@ import { Heart, Calendar, MapPin, Users, OrigamiIcon } from 'lucide-react';
 const Volunteer = () => {
   const experiences = [
     {
-      organization: "Bayyinah TV",
-      role: "Marketing Intern",
-      duration: "July-2025 - present",
-      location: "Remote",
-      description: "Currently interning with the marketing team to design and execute digital campaigns for educational content. Responsible for creating engaging graphics, managing social media posts, and analyzing campaign performance to optimize reach and engagement.",
-      impact: "Designed promotional graphics and visual assets for digital campaigns",
-      skills: ["Graphic Design", "Social Media Management", "Data Analysis","Subtitles"],
-      color: "from-bubble-pink to-hot-pink dark:from-purple-500 dark:to-pink-500"
+      organization: "MLSA Uet Lahore",
+      role: "Executive Management",
+      duration: "2023 - present",
+      location: "Lahore, Pakistan",
+      description: "Managed tech events in university and assisted the teams.",
+      impact: ".",
+      skills: ["Photography", "Photo Editing", "Visual Storytelling"],
+      color: "from-lemon-yellow to-bubble-pink dark:from-yellow-500 dark:to-purple-500"
     },
     {
       organization: "UET Lahore",

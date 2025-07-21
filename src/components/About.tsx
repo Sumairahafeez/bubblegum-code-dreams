@@ -69,7 +69,7 @@ const About = () => {
               My Tech Toolbox
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {['React', 'JavaScript', 'Winform', 'Python', 'Tailwind CSS', 'Node.js', 'Bootstrap', 'Adobe illustrator', 'Adobe Aftereffects','Flask','scikit-learn','react-native','expo', 'express js','github','gitlab'].map((tech, index) => (
+              {['React js', 'Next js', 'MongoDB', 'Python', 'Flask', 'Node.js', 'Bootstrap & Tailwind','pinecone','chromadb','scikit-learn','github','gitlab'].map((tech, index) => (
                 <div 
                   key={tech}
                   className={`bounce-button bg-gradient-to-r from-bubble-pink/20 to-aqua-blue/20 dark:from-purple-500/20 dark:to-blue-500/20 rounded-full px-4 py-2 text-center font-inter font-bold text-gray-800 dark:text-gray-200 border-2 border-dashed border-bubble-pink/50 dark:border-purple-400/50 hover:border-solid`}
