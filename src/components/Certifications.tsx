@@ -8,23 +8,23 @@ const Certifications = () => {
       title: "AI Engineer Explorer Certificate",
       issuer: "Jet Academy Udemy",
       date: "2025",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=300&fit=crop",
+      image: "../assets/explorer.png",
       credentialUrl: "#",
       skills: ["Matplotlib", "AI/ML", "Python"]
     },
+    // {
+    //   title: "AI Engineer Professional Certificate",
+    //   issuer: "Jet Academy Udemy",
+    //   date: "2025",
+    //   image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop",
+    //   credentialUrl: "#",
+    //   skills: ["Neural Network", "CNN", "Machine Learning"]
+    // },
     {
-      title: "AI Engineer Professional Certificate",
-      issuer: "Jet Academy Udemy",
-      date: "2025",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=300&fit=crop",
-      credentialUrl: "#",
-      skills: ["Neural Network", "CNN", "Machine Learning"]
-    },
-    {
-      title: "MongoDb Certificate",
-      issuer: "Great Learning Academy",
+      title: "Intro to python",
+      issuer: "DataCamp",
       date: "2024",
-      image: "../assets/mongodb.png",
+      image: "../assets/into to python.PNG",
       credentialUrl: "#",
       skills: ["MongoDB", "Database"]
     },
