@@ -12,6 +12,7 @@ const Volunteer = () => {
       impact: ".",
       skills: ["Photography", "Photo Editing", "Visual Storytelling"],
       color: "from-lemon-yellow to-bubble-pink dark:from-yellow-500 dark:to-purple-500"
+      // check
     },
     {
       organization: "UET Lahore",
